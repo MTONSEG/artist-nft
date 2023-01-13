@@ -207,6 +207,68 @@
 	}
 }
 
+.nft-item {
+	display: flex;
+	flex-direction: column;
+	width: 350px;
+	margin: 0 auto;
+	background: #212426;
+	border-radius: 12px;
+	transform: translateY(0);
+	@include transition3s;
+	cursor: pointer;
+	&:hover {
+		transform: translateY(-31px);
+	}
+	&__header {
+		font-size: 18px;
+		line-height: 26px;
+		padding: 17px 20px 18px;
+		letter-spacing: 0.1em;
+		span {
+			@include gradientFont;
+		}
+	}
+	&__image-wrap {
+		width: 350px;
+		height: 350px;
+	}
+	&__image {
+		@include imagePosition(cover);
+	}
+	&__body {
+		padding: 16px 21px 17px 24px;
+	}
+	&__title,
+	&__text {
+		max-width: 257px;
+	}
+	&__title {
+		font-size: 20px;
+		line-height: 30px;
+		margin-bottom: 2px;
+	}
+	&__text {
+		color: #C8D2DC;
+		line-height: 21px;
+		margin-bottom: 20px;
+	}
+	&__buy {
+		@include flex-center-between;
+		padding: 13px 0 0;
+		border-top: 1px solid rgba(252, 255, 255, 0.05);
+	}
+	&__price {
+		font-weight: 700;
+		font-size: 26px;
+		line-height: 34px;
+	}
+	&__btn {
+		padding: 17px 30px;
+		border-radius: 12px;
+	}
+}
+
 @media ($width1220) {
 	.hero {
 		padding-top: 148px;
@@ -276,8 +338,6 @@
 			}
 		}
 	}
-
-
 
 	.body-hero {
 		width: 100%;
@@ -371,6 +431,53 @@
 			display: none;
 		}
 	}
+
+	.nft-slider {
+		padding: 0 15px;
+	}
+
+	.nft-item {
+		width: 280px;
+		padding: 13px 13px 15px;
+		&__image-wrap {
+			order: -1;
+			width: 253px;
+			height: 253px;
+			border-radius: 12px;
+			overflow: hidden;
+			margin-bottom: 8px;
+		}
+		&__header {
+			font-size: 14px;
+			line-height: 26px;
+			margin-bottom: 0;
+			padding: 0;
+		}
+		&__body {
+			padding: 0;
+		}
+		&__title {
+			font-size: 18px;
+			line-height: 26px;
+			margin-bottom: 2px;
+		}
+		&__text {
+			font-size: 12px;
+			line-height: 20px;
+			margin-bottom: 13px;
+		}
+		&__buy {
+			padding: 11px 6px 0 0;
+		}
+		&__btn {
+			padding: 12px 20px;
+			border-radius: 8px;
+		}
+		&__price {
+			font-size: 22px;
+			line-height: 34px;
+		}
+	}
 }
 
 @media ($width575) {
@@ -384,6 +491,7 @@
 	}
 
 	.banner {
+		margin-bottom: 26px;
 		&__body {
 			background: url("@img/home_banner-bg_m.png") 62% calc(100% + 224px) no-repeat, linear-gradient(140.92deg, #6880FF 3.3%, #3CA7F4 52.35%, #8C45FF 92.15%);
 			padding: 32px 26px;
