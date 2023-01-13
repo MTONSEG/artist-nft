@@ -42,6 +42,7 @@ body._lock {
 	@include flex-center-center;
 	font-weight: 700;
 	text-align: center;
+	border-radius: 16px;
 	&_light {
 		background: $gradientLight;
 		color: #1D1F21;
@@ -49,11 +50,7 @@ body._lock {
 	&_dark {
 		background: $gradientDark;
 		span {
-			background: $gradientLight;
-			-webkit-background-clip: text;
-			-webkit-text-fill-color: transparent;
-			background-clip: text;
-			text-fill-color: transparent;
+			@include gradientFont;
 		}
 	}
 	&:hover {

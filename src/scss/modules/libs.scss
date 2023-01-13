@@ -10,6 +10,13 @@ $gradientLight:  linear-gradient(94.78deg, #68C9FF 9.27%, #D1B5FF 84.06%);
 $gradientDark: linear-gradient(94.78deg, rgba(104, 201, 255, 0.1) 9.27%, rgba(209, 181, 255, 0.1) 84.06%);
 $gradientMenu: linear-gradient(94.78deg, rgb(36, 39, 43) 9.27%, rgb(38, 27, 56) 84.06%);
 
+@mixin gradientFont {
+	background: linear-gradient(94.78deg, #68C9FF 9.27%, #D1B5FF 84.06%);
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
 @mixin font-Manrope {
 	font-family: 'Manrope';
 }
@@ -53,10 +60,4 @@ $gradientMenu: linear-gradient(94.78deg, rgb(36, 39, 43) 9.27%, rgb(38, 27, 56) 
 	width: 100%;
 	height: 100%;
 	object-fit: $object-fit;
-}
-
-@mixin gradientFont {
-	background: linear-gradient(94.78deg, #68C9FF 9.27%, #D1B5FF 84.06%);
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
 }

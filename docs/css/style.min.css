@@ -309,6 +309,7 @@ body._lock {
   justify-content: center;
   font-weight: 700;
   text-align: center;
+  border-radius: 16px;
 }
 .btn_light {
   background: linear-gradient(94.78deg, #68C9FF 9.27%, #D1B5FF 84.06%);
@@ -319,10 +320,9 @@ body._lock {
 }
 .btn_dark span {
   background: linear-gradient(94.78deg, #68C9FF 9.27%, #D1B5FF 84.06%);
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  background-clip: text;
-  text-fill-color: transparent;
 }
 .btn:hover {
   box-shadow: 0 0 5px #fff;
@@ -694,6 +694,9 @@ body._lock {
   display: none;
 }
 
+.biography {
+  margin-bottom: 67px;
+}
 .biography__container {
   margin: 0 auto;
   max-width: 1162px;
@@ -723,6 +726,7 @@ body._lock {
 }
 .biography__subtitle {
   background: linear-gradient(94.78deg, #68C9FF 9.27%, #D1B5FF 84.06%);
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   line-height: 26px;
@@ -766,6 +770,33 @@ body._lock {
 .biography .image-hero__bubble-big {
   left: -4.6%;
   top: 51.9%;
+}
+
+.banner {
+  margin-bottom: 11px;
+}
+.banner__body {
+  background: url("../img/home_banner-bg.png") 100% center no-repeat, linear-gradient(94.78deg, #6880FF 9.27%, #3CA7F4 50.77%, #8C45FF 84.06%);
+  border-radius: 24px;
+  border-radius: 24px;
+  padding: 83px 110px 84px;
+}
+.banner__icon, .banner__title, .banner__text {
+  margin-bottom: 12px;
+}
+.banner__icon {
+  width: 45px;
+  height: 45px;
+}
+.banner__text {
+  max-width: 441px;
+}
+.banner__btn {
+  font-size: 18px;
+  line-height: 26px;
+  background: #1D1F21;
+  padding: 18px 37px 20px;
+  max-width: 167px;
 }
 
 @media (max-width: 1220px) {
@@ -916,6 +947,31 @@ body._lock {
   .body-hero {
     text-align: left;
     align-items: start;
+  }
+  .biography {
+    margin-bottom: 8px;
+  }
+  .banner__body {
+    background: url("../img/home_banner-bg_m.png") 62% calc(100% + 224px) no-repeat, linear-gradient(140.92deg, #6880FF 3.3%, #3CA7F4 52.35%, #8C45FF 92.15%);
+    padding: 32px 26px;
+    height: 514px;
+  }
+  .banner__icon {
+    width: 24px;
+    height: 24px;
+    margin-bottom: 4px;
+  }
+  .banner__title {
+    margin-bottom: 8px;
+  }
+  .banner__text {
+    margin-bottom: 24px;
+  }
+  .banner__btn {
+    font-size: 15px;
+    line-height: 26px;
+    max-width: 135px;
+    padding: 12px 22px 13px;
   }
 }
 @media (max-width: 375px) {
