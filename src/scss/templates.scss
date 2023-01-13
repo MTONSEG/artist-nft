@@ -10,7 +10,7 @@ body._lock {
 	&_main {
 		background: 
 			url("@img/blur-w.png") -609px -36px no-repeat,
-			url("@img/blur-b.png") -100px 619px no-repeat;
+			url("@img/blur-b.png") -295px 564px no-repeat;
 	}
 }
 
@@ -26,16 +26,16 @@ body._lock {
 .title {
 	font-size: 64px;
 	line-height: 65px;
-	&_small {
-		font-size: 36px;
-		line-height: 50px;
-	}
+}
+
+.title-small {
+	font-size: 36px;
+	line-height: 50px;
 }
 
 .text {
 	font-size: 16px;
 	line-height: 28px;
-	max-width: 271px
 }
 
 .btn {
@@ -79,10 +79,11 @@ body._lock {
 	.title {
 		font-size: 36px;
 		line-height: 40px;
-		&_small {
-			font-size: 26px;
-			line-height: 34px;
-		}
+	}
+
+	.title-small {
+		font-size: 26px;
+		line-height: 34px;
 	}
 
 	.text {
@@ -95,8 +96,8 @@ body._lock {
 	.wrapper {
 		&_main {
 			background: 
-				url("@img/blur-w.png") center 40px no-repeat,
-				// url("@img/blur-b.png") -100px 619px no-repeat;
+				url("@img/blur-w_m.png") center 40px no-repeat,
+				url("@img/blur-b_m.png") -150px 719px no-repeat;
 		}
 	}
 	.container {

@@ -46,6 +46,7 @@
 		margin-bottom: 12px;
 	}
 	&__text {
+		max-width: 271px;
 		margin-bottom: 42px;
 	}
 	&__buttons {
@@ -101,6 +102,81 @@
 		}
 	}
 }
+
+.biography {
+	&__container {
+		margin: 0 auto;
+		max-width: 1162px;
+		padding: 0 15px;
+	}
+	&__row {
+		position: relative;
+		display: flex;
+		align-items: center;
+	}
+	&__image-wrap {
+		position: relative;
+		width: 487px;
+		height: 618px;
+		margin: 0 65px 0 0;
+		flex-shrink: 1;
+	}
+	&__image {
+		width: 100%;
+		border-radius: 40px;
+		position: relative;
+		z-index: 2;
+	}
+	&__body {
+		padding: 14px 0 0;
+		max-width: 550px
+	}
+
+	&__subtitle {
+		@include gradientFont;
+		line-height: 26px;
+		font-size: 18px;
+		width: max-content;
+		letter-spacing: 0.1em;
+	}
+	&__title {
+		margin-bottom: 17px;
+	}
+	&__text {
+		margin-bottom: 41px;
+	}
+	&__list {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 17px;
+	}
+	&__year {
+		color: #C5FF98;
+		font-weight: 700;
+		background: rgba(197, 255, 152, 0.1);
+		border-radius: 10px;
+		width: 60px;
+		height: 32px;
+		@include flex-center-center;
+		margin: 0 0 10px 0;
+	}
+	&__year-text {
+		font-weight: 600;
+		font-size: 16px;
+		line-height: 28px;
+	}
+
+	& .image-hero__star {
+		right: auto;
+		top: 154px;
+		left: -77px;
+	}
+	& .image-hero__bubble-big {
+		left: -4.6%;
+		top: 51.9%;
+	}
+}
+
 @media ($width1220) {
 	.hero {
 		padding-top: 148px;
@@ -140,6 +216,13 @@
 			display: none;
 		}
 	}
+
+	.biography {
+		&__image-wrap {
+			margin: 0 30px 0 0;
+			min-width: 250px;
+		}
+	}
 }
 
 @media ($width767) {
@@ -163,11 +246,24 @@
 		}
 	}
 
+
+
 	.body-hero {
+		width: 100%;
 		padding: 40px 15px 33px 0;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
 		&__title {
 			margin-bottom: 8px;
 			max-width: 263px;
+		}
+		&__text {
+			margin-bottom: 21px;
+		}
+		&__title {
+			margin-bottom: 8px;
 		}
 		&__text {
 			margin-bottom: 21px;
@@ -203,5 +299,61 @@
 			}
 		}
 	}
+
+	.biography{
+		&__row {
+			flex-direction: column;
+			align-items: start;
+		}
+		&__head {
+			
+		}
+		&__image-wrap {
+			width: 304px;
+			height: 353px;
+			margin: 0 auto;
+		}
+		&__body {
+			max-width: 100%;
+		}
+		&__subtitle {
+			font-size: 14px;
+			line-height: 26px;
+		}
+		&__title {
+			margin-bottom: 20px;
+		}
+		&__text {
+			margin-bottom: 31px;
+		}
+		&__year {
+			margin: 0 auto 13px;
+			height: 29px;
+		}
+		&__year-text {
+			font-size: 14px;
+			line-height: 24px;
+			text-align: center;
+		}
+		& .image-hero__star,
+		& .image-hero__bubble-big {
+			display: none;
+		}
+	}
 }
 
+@media ($width575) {
+	.body-hero {
+		text-align: left;
+		align-items: start;
+	}
+	
+}
+
+@media ($width375) {
+	.biography {
+		&__image-wrap {
+			margin: 0 0 22px 5px;
+		}
+	}
+}

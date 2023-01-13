@@ -276,7 +276,7 @@ body._lock {
   overflow: hidden;
 }
 .wrapper_main {
-  background: url("../img/blur-w.png") -609px -36px no-repeat, url("../img/blur-b.png") -100px 619px no-repeat;
+  background: url("../img/blur-w.png") -609px -36px no-repeat, url("../img/blur-b.png") -295px 564px no-repeat;
 }
 
 .container {
@@ -292,7 +292,8 @@ body._lock {
   font-size: 64px;
   line-height: 65px;
 }
-.title_small {
+
+.title-small {
   font-size: 36px;
   line-height: 50px;
 }
@@ -300,7 +301,6 @@ body._lock {
 .text {
   font-size: 16px;
   line-height: 28px;
-  max-width: 271px;
 }
 
 .btn {
@@ -346,7 +346,7 @@ body._lock {
     font-size: 36px;
     line-height: 40px;
   }
-  .title_small {
+  .title-small {
     font-size: 26px;
     line-height: 34px;
   }
@@ -357,7 +357,7 @@ body._lock {
 }
 @media (max-width: 375px) {
   .wrapper_main {
-    background: url("../img/blur-w.png") center 40px no-repeat;
+    background: url("../img/blur-w_m.png") center 40px no-repeat, url("../img/blur-b_m.png") -150px 719px no-repeat;
   }
   .container_home {
     padding: 0 0 0 15px;
@@ -638,6 +638,7 @@ body._lock {
   margin-bottom: 12px;
 }
 .body-hero__text {
+  max-width: 271px;
   margin-bottom: 42px;
 }
 .body-hero__buttons {
@@ -693,6 +694,80 @@ body._lock {
   display: none;
 }
 
+.biography__container {
+  margin: 0 auto;
+  max-width: 1162px;
+  padding: 0 15px;
+}
+.biography__row {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.biography__image-wrap {
+  position: relative;
+  width: 487px;
+  height: 618px;
+  margin: 0 65px 0 0;
+  flex-shrink: 1;
+}
+.biography__image {
+  width: 100%;
+  border-radius: 40px;
+  position: relative;
+  z-index: 2;
+}
+.biography__body {
+  padding: 14px 0 0;
+  max-width: 550px;
+}
+.biography__subtitle {
+  background: linear-gradient(94.78deg, #68C9FF 9.27%, #D1B5FF 84.06%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  line-height: 26px;
+  font-size: 18px;
+  width: max-content;
+  letter-spacing: 0.1em;
+}
+.biography__title {
+  margin-bottom: 17px;
+}
+.biography__text {
+  margin-bottom: 41px;
+}
+.biography__list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 17px;
+}
+.biography__year {
+  color: #C5FF98;
+  font-weight: 700;
+  background: rgba(197, 255, 152, 0.1);
+  border-radius: 10px;
+  width: 60px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 0 10px 0;
+}
+.biography__year-text {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 28px;
+}
+.biography .image-hero__star {
+  right: auto;
+  top: 154px;
+  left: -77px;
+}
+.biography .image-hero__bubble-big {
+  left: -4.6%;
+  top: 51.9%;
+}
+
 @media (max-width: 1220px) {
   .hero {
     padding-top: 148px;
@@ -728,6 +803,10 @@ body._lock {
   .image-hero__bubble-small {
     display: none;
   }
+  .biography__image-wrap {
+    margin: 0 30px 0 0;
+    min-width: 250px;
+  }
 }
 @media (max-width: 767px) {
   .hero {
@@ -748,11 +827,22 @@ body._lock {
     top: -17px;
   }
   .body-hero {
+    width: 100%;
     padding: 40px 15px 33px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
   }
   .body-hero__title {
     margin-bottom: 8px;
     max-width: 263px;
+  }
+  .body-hero__text {
+    margin-bottom: 21px;
+  }
+  .body-hero__title {
+    margin-bottom: 8px;
   }
   .body-hero__text {
     margin-bottom: 21px;
@@ -786,5 +876,50 @@ body._lock {
     top: 0px;
     right: auto;
     left: -15px;
+  }
+  .biography__row {
+    flex-direction: column;
+    align-items: start;
+  }
+  .biography__image-wrap {
+    width: 304px;
+    height: 353px;
+    margin: 0 auto;
+  }
+  .biography__body {
+    max-width: 100%;
+  }
+  .biography__subtitle {
+    font-size: 14px;
+    line-height: 26px;
+  }
+  .biography__title {
+    margin-bottom: 20px;
+  }
+  .biography__text {
+    margin-bottom: 31px;
+  }
+  .biography__year {
+    margin: 0 auto 13px;
+    height: 29px;
+  }
+  .biography__year-text {
+    font-size: 14px;
+    line-height: 24px;
+    text-align: center;
+  }
+  .biography .image-hero__star, .biography .image-hero__bubble-big {
+    display: none;
+  }
+}
+@media (max-width: 575px) {
+  .body-hero {
+    text-align: left;
+    align-items: start;
+  }
+}
+@media (max-width: 375px) {
+  .biography__image-wrap {
+    margin: 0 0 22px 5px;
   }
 }

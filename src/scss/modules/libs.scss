@@ -54,3 +54,9 @@ $gradientMenu: linear-gradient(94.78deg, rgb(36, 39, 43) 9.27%, rgb(38, 27, 56) 
 	height: 100%;
 	object-fit: $object-fit;
 }
+
+@mixin gradientFont {
+	background: linear-gradient(94.78deg, #68C9FF 9.27%, #D1B5FF 84.06%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
