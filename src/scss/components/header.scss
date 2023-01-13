@@ -1,0 +1,232 @@
+.header__row,
+.header__buttons,
+.menu,
+.menu__list,
+.menu__buttons {
+	@include flex-ai-center;
+}
+
+.header__prem-btn,
+.menu__author-btn {
+	padding: 17px 22px;
+	border-radius: 12px;
+}
+
+.header {
+	background: $bg-color;
+	&__row {
+		padding: 8px 0;
+	}
+	&__logo-link {
+		margin: 0 14px 0 0;
+	}
+	&__buttons {
+		margin: 0 0 0 8px;
+		flex-shrink: 0;
+	}
+}
+
+.menu {
+	width: 100%;
+	justify-content: space-between;
+	&__close {
+		display: none;
+	}
+	&__item {
+		margin: 0 2px 0 0;
+	}
+	&__link {
+		font-family: 'Manrope';
+		padding: 8px 12px;
+		color: #C8D2DC;
+		font-size: 14px;
+		line-height: 19px;
+		border-radius: 8px;
+		position: relative;
+		transition: .5s all;
+		&_lock {
+			padding: 8px 12px 8px 34px;
+			&::before {
+				content: url('@img/icons/lock.svg');
+				display: block;
+				position: absolute;
+				top: calc(50% - 7px);
+				left: 12px;
+			}
+		}
+		&:hover {
+			background: $gradientDark;
+		}
+	}
+	&__select {
+		margin: 0 8px 0 0;
+		& .select__header {
+			width: 74px;
+			height: 35px;
+			@include flex-center-between;
+		}
+		& .select__current {
+			margin: 2px 4px 0 0;
+		}
+		& .select__icon {
+			margin: 0 5px 0 0;
+		}
+	}
+	&__author-btn {
+		display: block;
+		background: $gradientDark;
+	}
+}
+
+.menu-btn {
+	display: none;
+}
+
+.main {
+	flex: 1 1 auto;
+}
+
+@media ($width1220) {
+	.header {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		z-index: 8;
+		&__row {
+			justify-content: space-between;
+		}
+		&__buttons,
+		&_logo {
+			position: relative;
+			z-index: 1;
+		}
+		&__prem-btn {
+			position: relative;
+			background: $gradientDark;
+			height: 32px;
+			width: 32px;
+			padding: 0;
+			flex-shrink: 0;
+			flex-grow: 0;
+			margin: 0 10px 0 0;
+			span {
+				display: none;
+			}
+			&::before {
+				content: url("@img/icons/crown-gradient.svg");
+				position: absolute;
+				top: 56%;
+				left: 51%;
+				transform: translate(-50%, -50%);
+			}
+		}
+	}
+
+	.menu-btn {
+		position: relative;
+		z-index: 1;
+		display: block;
+	}
+
+	.menu {
+		background: $gradientMenu;
+		position: fixed;
+		top: 0;
+		right: -100%;
+		width: 280px;
+		height: 100%;
+		display: flex;
+		justify-content: flex-start;
+		align-items: stretch;
+		flex-direction: column;
+		padding: 40px 0 72px;
+		visibility: hidden;
+		opacity: 0;
+		z-index: -1;
+		@include transition3s;
+		&._active {
+			right: 0;
+			opacity: 1;
+			visibility: visible;
+			z-index: 10;
+		}
+		&__close {
+			display: block;
+			position: absolute;
+			top: 10px;
+			right: 10px;
+			width: 30px;
+			height: 30px;
+			display: flex;
+			align-items: center;
+			cursor: pointer;
+			&::before,
+			&::after {
+				content: "";
+				background: $gradientLight;
+				width: 100%;
+				height: 3px;
+				width: 100%;
+				position: absolute;
+				transform: rotate(-45deg);
+				@include transition3s;
+			}
+			&::after {
+				transform: rotate(45deg);
+			}
+			&:hover::before,
+			&:hover::after {
+				box-shadow: 0 0 4px #fff;
+			}
+		}
+		&__list {
+			flex-direction: column;
+			flex: 1 1 auto;
+			overflow-y: auto;
+			overflow-x: hidden;
+			align-items: flex-start;
+		}
+		&__item {
+			width: 100%;
+			border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+			&:last-child {
+				border: none;
+			}
+		}
+		&__link {
+			font-size: 20px;
+			font-weight: 700;
+			padding: 20px;
+			width: 100%;
+			border-radius: 0;
+			&_lock {
+				display: flex;
+				justify-content: flex-end;
+				flex-direction: row-reverse;
+				&::before {
+					position: static;
+					margin: 1px 0 0 10px;
+				}
+			}
+		}
+		&__buttons {
+			background: rgba(0, 0, 0, 0.4);
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			padding: 12px 20px;
+			width: 100%;
+			justify-content: center;
+			border-bottom: 2px solid $gradientDark;
+		}
+		&__select {
+			& .select {
+				&__body {
+					top: auto;
+					bottom: calc(100% + 5px);
+				}
+			}
+		}
+	}
+}

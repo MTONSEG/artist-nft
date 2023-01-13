@@ -1,0 +1,58 @@
+.select {
+	position: relative;
+	text-transform: uppercase;
+	&__header,
+	&__icon,
+	&__body {
+		@include transition2s;
+	}
+	&__header {
+		cursor: pointer;
+		position: relative;
+		background: #212426;
+		border-radius: 7px;
+		@include flex-center-center;
+		padding: 8px 12px;
+		&:hover {
+			box-shadow: 0 0 3px #fff;
+		}
+	}
+	&__current {
+		margin: 0 4px 0 0;
+		color: #C8D2DC;
+	}
+	&__icon {
+		display: block;
+	}
+	&__body {
+		right: 0;
+		top: calc(100% + 5px);
+		width: 100%;
+		position: absolute;
+		opacity: 0;
+		visibility: hidden;
+		z-index: 2;
+		background: #333435;
+		border-radius: 4px;
+		overflow: hidden;
+	}
+	&__item {
+		padding: 8px 4px;
+		cursor: pointer;
+		text-align: center;
+		&:hover {
+			background: $gradientLight;
+			color: #000;
+		}
+	}
+	&._active .select__body {
+		opacity: 1;
+		visibility: visible;
+	}
+	&._active .select__header {
+		border-color: #337D5A;
+	}
+	&._active .select__icon {
+		transform: rotate(180deg);
+	}
+}
