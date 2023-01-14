@@ -42,6 +42,10 @@
 	&__soc-link:hover {
 		transform: scale(1.1);
 	}
+	&__soc-icon {
+		width: 24px;
+		height: 24px;
+	}
 	&__title {
 		margin-bottom: 12px;
 	}
@@ -80,6 +84,7 @@
 	}
 	&__image {
 		width: 100%;
+		aspect-ratio: 343/314;
 	}
 	&__bubble-small {
 		width: 10px;
@@ -127,19 +132,13 @@
 		border-radius: 40px;
 		position: relative;
 		z-index: 2;
+		aspect-ratio: 487/618;
 	}
 	&__body {
 		padding: 14px 0 0;
 		max-width: 550px
 	}
 
-	&__subtitle {
-		@include gradientFont;
-		line-height: 26px;
-		font-size: 18px;
-		width: max-content;
-		letter-spacing: 0.1em;
-	}
 	&__title {
 		margin-bottom: 17px;
 	}
@@ -207,6 +206,10 @@
 	}
 }
 
+.nft-slider {
+	margin-bottom: 87px;
+}
+
 .nft-item {
 	display: flex;
 	flex-direction: column;
@@ -221,13 +224,7 @@
 		transform: translateY(-31px);
 	}
 	&__header {
-		font-size: 18px;
-		line-height: 26px;
 		padding: 17px 20px 18px;
-		letter-spacing: 0.1em;
-		span {
-			@include gradientFont;
-		}
 	}
 	&__image-wrap {
 		width: 350px;
@@ -266,6 +263,24 @@
 	&__btn {
 		padding: 17px 30px;
 		border-radius: 12px;
+	}
+}
+
+.contact {
+	margin-bottom: 91px;
+	background: 
+		url('@img/contact-bg_img-1.png') 0 255px no-repeat,
+		url('@img/contact-bg_img-2.png') 146px 123px no-repeat,
+		url('@img/contact-bg_img-3.png')  216px calc(100% - 14px) no-repeat,
+		url('@img/contact-bg_img-4.png') 100% 29px no-repeat;
+	&__title,
+	&__subtitle {
+		text-align: center;
+	}
+	&__title {
+		margin: 0 auto;
+		margin-bottom: 37px;
+		max-width: 540px;
 	}
 }
 
@@ -382,11 +397,15 @@
 		&__star {
 			top: -7px;
 			right: 37px;
+			width: 36px;
+			height: 48px;
 			&_2nd {
 				display: block;
 				top: 0px;
 				right: auto;
 				left: -15px;
+				width: 30px;
+				height: 41px;
 			}
 		}
 	}
@@ -396,20 +415,16 @@
 			flex-direction: column;
 			align-items: start;
 		}
-		&__head {
-			
-		}
 		&__image-wrap {
 			width: 304px;
 			height: 353px;
 			margin: 0 auto;
 		}
+		&__image {
+			aspect-ratio: 304/353;
+		}
 		&__body {
 			max-width: 100%;
-		}
-		&__subtitle {
-			font-size: 14px;
-			line-height: 26px;
 		}
 		&__title {
 			margin-bottom: 20px;
@@ -433,6 +448,7 @@
 	}
 
 	.nft-slider {
+		margin-bottom: 0;
 		padding: 0 15px;
 	}
 
@@ -448,8 +464,6 @@
 			margin-bottom: 8px;
 		}
 		&__header {
-			font-size: 14px;
-			line-height: 26px;
 			margin-bottom: 0;
 			padding: 0;
 		}
@@ -476,6 +490,22 @@
 		&__price {
 			font-size: 22px;
 			line-height: 34px;
+		}
+	}
+
+	.contact {
+		margin-bottom: 34px;
+		padding: 37px 0 0;
+		background: 
+			url("@img/contact-bg_img-1_m.png") calc(100% - 50px) 18px no-repeat,
+			url("@img/contact-bg_img-2_m.png")  100% 1px no-repeat;
+		&__subtitle,
+		&__title {
+			text-align: left;
+		}
+		&__title {
+			max-width: 306px;
+			margin: 0 0 15px 0;
 		}
 	}
 }
@@ -518,6 +548,11 @@
 }
 
 @media ($width375) {
+	.image-hero {
+		&__image {
+			aspect-ratio: 360/349;
+		}
+	}
 	.biography {
 		&__image-wrap {
 			margin: 0 0 22px 5px;

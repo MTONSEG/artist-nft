@@ -3,15 +3,18 @@ body._lock {
 }
 
 .wrapper {
+	overflow: hidden;
+	margin: 0 auto;
+	max-width: 2560px;
 	min-height: 100vh;
 	display: flex;
 	flex-direction: column;
 	overflow: hidden;
 	&_main {
 		background: 
-			url("@img/blur-w.png") -609px -36px no-repeat,
-			url("@img/blur-b.png") -295px 564px no-repeat,
-			url("@img/blur-b.png") 50% 1564px no-repeat;
+			url("@img/blur-w.png") 0 3px no-repeat,
+			url("@img/blur-b.png") 0 564px no-repeat,
+			url("@img/blur-b2.png") 50% 1664px no-repeat;
 	}
 }
 
@@ -32,6 +35,15 @@ body._lock {
 .title-small {
 	font-size: 36px;
 	line-height: 50px;
+}
+
+.subtitle {
+	font-size: 18px;
+	line-height: 26px;
+	letter-spacing: 0.1em;
+	span {
+		@include gradientFont;
+	}
 }
 
 .text {
@@ -66,6 +78,79 @@ body._lock {
 	position: absolute;
 }
 
+.form {
+	&__wrapper {
+		margin: 0 auto;
+		max-width: 410px;
+	}
+	&__input-wrap {
+		margin-bottom: 15px;
+	}
+	&__input {
+		display: block;
+		background: #212426;
+		border-radius: 9px;
+		color: rgba(200, 210, 220, 0.6);
+		font-size: 16px;
+		line-height: 21px;
+		padding: 21px 32px 22px;
+		width: 100%;
+		&::placeholder {
+			font-size: inherit;
+			color: rgba(200, 210, 220, 0.6);
+		}
+		&_text {
+			resize: none;
+			height: 182px;
+		}
+	}
+	&__input-title {
+		color: #C8D2DC;
+		line-height: 21px;
+		margin-bottom: 7px;
+	}
+	&__btn {
+		font-size: 18px;
+		line-height: 26px;
+		padding: 18px 20px 19px;
+		width: 100%;
+		margin-bottom: 20px;
+	}
+	&__custom-check {
+		display: block;
+		position: relative;
+		color: #C8D2DC;
+		width: 100%;
+		@include flex-ai-center;
+		&::before {
+			content: "";
+			width: 20px;
+			height: 20px;
+			border: 1px solid #525960;
+			border-radius: 7px;
+			flex-shrink: 0;
+			margin: 0 10px 0 0;
+		}
+	}
+	&__input-checkbox {
+		pointer-events: none;
+		opacity: 0;
+		visibility: hidden;
+		&:checked + label::before {
+			content: url('@img/icons/check.svg');
+			border-color: #86A8FF;
+			box-shadow: 0 0 3px #86A8FF;
+		}
+	}
+	&__link {
+		display: inline-block;
+		font-weight: 600;
+		color: #86A8FF;
+		margin: 0 5px;
+		text-decoration: underline;
+	}
+}
+
 @media ($width991) {
 	.title {
 		font-size: 48px;
@@ -84,9 +169,23 @@ body._lock {
 		line-height: 34px;
 	}
 
+	.subtitle {
+		font-size: 14px;
+		line-height: 26px;
+	}
+
 	.text {
 		font-size: 15px;
 		line-height: 24px;
+	}
+
+	.form {
+		&__wrapper {
+			max-width: 100%;
+		}
+		&__btn {
+			margin-bottom: 17px;
+		}
 	}
 }
 
@@ -94,8 +193,9 @@ body._lock {
 	.wrapper {
 		&_main {
 			background: 
-				url("@img/blur-w_m.png") center 40px no-repeat,
-				url("@img/blur-b_m.png") -150px 719px no-repeat;
+				url("@img/blur-w_m.png") center 87px no-repeat,
+				url("@img/blur-b_m.png") 100% 707px no-repeat,
+				url("@img/blur-b2_m.png") 0 1659px no-repeat;
 		}
 	}
 	.container {
