@@ -1,4 +1,4 @@
-import { isWebp, removeClass, addClass } from "./modules/functions.js";
+import { isWebp, removeClass, addClass, toggleClass } from "./modules/functions.js";
 import * as dynamicAdaptive from './modules/dynamicAdapt.js';
 import * as select from './modules/select.js';
 import * as burger from './modules/menu.js';
@@ -21,3 +21,22 @@ const nftSlider = new Swiper('.nft-slider', {
 		}
 	}
 })
+
+
+//Show info in Item Gallery
+const gallery = document.querySelector('.gallery');
+
+if (gallery) {
+	const galleryItems = gallery.querySelectorAll('.gallery__item'); 
+
+	for (let item of galleryItems) {
+		item.addEventListener('mouseenter', e => {
+			addClass(item, '_active');
+		});
+		
+		item.addEventListener('mouseleave', e => {
+			removeClass(item, '_active');
+		})
+
+	}
+}

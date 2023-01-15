@@ -60,11 +60,15 @@ body._lock {
 		background: $gradientLight;
 		color: #1D1F21;
 	}
+	&_dark span,
+	&_black span {
+		@include gradientFont;
+	}
 	&_dark {
 		background: $gradientDark;
-		span {
-			@include gradientFont;
-		}
+	}
+	&_black {
+		background: #1D1F21;
 	}
 	&:hover {
 		box-shadow: 0 0 5px #fff;
@@ -76,7 +80,27 @@ body._lock {
 	border: 1px solid $base-color;
 	background: transparent;
 	position: absolute;
+	width: 25px;
+	height: 25px;
 }
+
+.text-bg {
+	position: absolute;
+	font-weight: 700;
+	font-size: 80px;
+	line-height: 97px;
+	-webkit-text-fill-color: transparent;
+	-webkit-text-stroke: 1px rgb(252, 255, 255, 0.2);
+	&_1 {
+		left: -182px;
+		top: -63px;
+	}
+	&_2 {
+		left: 28.55%;
+		bottom: -2px;
+	}
+}
+
 
 .form {
 	&__wrapper {

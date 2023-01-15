@@ -1,0 +1,221 @@
+.inspire {
+	position: relative;
+	padding: 62px 0 76px;
+	background: url('@img/blur-b2.png') center -134px no-repeat;
+	&__title,
+	&__text {
+		text-align: center;
+	}
+	&__title {
+		margin-bottom: 16px;
+	}
+	&__text {
+		max-width: 415px;
+		margin: 0 auto 49px;
+	}
+	& .text-bg {
+		&_1 {
+			top: 87px;
+			left: -38px;
+		}
+		&_2 {
+			top: 86px;
+			left: auto;
+			right: -26px;
+		}
+	}
+	&__star {
+		position: absolute;
+		left: 27.1%;
+		top: 49px;
+	}
+	&__bubble {
+		top: 194px;
+		right: 24.5%;
+	}
+}
+
+.gallery {
+	&__list {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 24px 29px;
+		margin-bottom: 24px;
+		&_big {
+			display: flex;
+			&._reverse {
+				flex-direction: column-reverse;
+			}
+		}
+		&:last-child {
+			margin: 0;
+		}
+	}
+	&__item {
+		border-radius: 12px;
+		overflow: hidden;
+		width: 100%;
+		max-width: 351px;
+		position: relative;
+		&_big {
+			flex: 1 1 auto;
+			max-width: 730px;
+		}
+		&._active .gallery__item-info{
+			top: 0;
+		}
+	}
+	&__image {
+		@include imagePosition(cover)
+	}
+	
+	&__item-info {
+		position: absolute;
+		top: 100%;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: linear-gradient(140.92deg, rgba(104, 128, 255, 0.9) 3.3%, rgba(60, 167, 244, 0.9) 52.35%, rgba(140, 69, 255, 0.9) 92.15%);
+		@include flex-center-center;
+		flex-direction: column;
+		padding: 12px 15px 10px;
+		text-align: center;
+		@include transition3s;
+		&._lock {
+			top: 0;
+			background: transparent;
+			border: 1px solid #525960;
+			border-radius: 12px;
+			& .gallery__item-title {
+				font-size: 26px;
+				line-height: 34px;
+			}
+		}
+	}
+	&__item-subtitle {
+		margin-bottom: 2px;
+	}
+	&__item-title {
+		@include flex-ai-center;
+		gap: 16px;
+		font-size: 36px;
+		line-height: 50px;
+		margin-bottom: 22px;
+		img {
+			width: 40px;
+			height: 40px;
+		}
+	}
+	&__item-text {
+		line-height: 21px;
+		max-width: 257px;
+		margin-bottom: 16px;
+	}
+	&__item-price {
+		font-size: 26px;
+		line-height: 34px;
+		margin-bottom: 24px;
+	}
+	&__item-btn {
+		width: 134px;
+		height: 64px;
+		font-size: 18px;
+		line-height: 26px;
+		padding: 10px 30px;
+		justify-content: flex-start;
+		&_buy {
+			width: 122px;
+			justify-content: center
+		}
+	}
+	&__btn-wrap {
+		@include flex-center-center;
+		gap: 12px;
+	}
+	&__btn-icon {
+		margin: 0 0 0 14px;
+		width: 12px;
+		height: 12px;
+	}
+}
+@media ($width1220) {
+	.inspire {
+		padding: 90px 0 38px;
+		& .text-bg {
+			display: none;
+		}
+		&__star {
+			left: calc(100% - 19px);
+			top: 64px;
+			width: 26px;
+			height: 36px;
+		}
+		&__bubble {
+			top: 138px;
+			right: calc(100% - 15px);
+		}
+	}
+}
+
+@media ($width991) {
+	.gallery {
+		&__item._lock .gallery__item-title,
+		&__item-title {
+			font-size: 22px;
+			line-height: 120%;
+			margin-bottom: 20px;
+			gap: 10px;
+			img {
+				width: 20px;
+				height: 20px;
+			}
+		}
+		&__item-text {
+			display: none;
+		}
+		&__item-btn_buy{
+			display: none;
+		}
+		&__item-price {
+			line-height: 20px;
+			font-size: 16px;
+			&::before {
+				content: 'Price: ';
+				opacity: 0.6;
+			}
+		}
+	}
+}
+@media ($width767) {
+	.inspire {
+		background: transparent !important;
+	}
+	.gallery {
+		&__list {
+			gap: 19px;
+			margin-bottom: 19px;
+		}
+	}
+}
+
+@media ($width575) {
+	.gallery {
+		&__list {
+			grid-template-columns: 1fr;
+			margin-bottom: 19px;
+			gap: 19px;
+			&_big {
+				flex-direction: column;
+				align-items: center;
+				gap: 19px;
+			}
+		}
+		&__item {
+			margin: 0 auto;
+			max-width: 345px;
+			&_big {
+				max-width: 345px;
+			}
+		}
+	}
+}
