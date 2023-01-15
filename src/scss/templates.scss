@@ -19,6 +19,9 @@ body._lock {
 	&_arts {
 		background: url("@img/blur-b_arts.png") 0 20px no-repeat;
 	}
+	&_product {
+		background: url("@img/blur-b_arts.png") 0 20px no-repeat;
+	}
 }
 
 .container {
@@ -126,6 +129,8 @@ body._lock {
 		line-height: 21px;
 		padding: 21px 32px 22px;
 		width: 100%;
+		@include transition2s;
+		border: 1px solid transparent;
 		&::placeholder {
 			font-size: inherit;
 			color: rgba(200, 210, 220, 0.6);
@@ -133,6 +138,12 @@ body._lock {
 		&_text {
 			resize: none;
 			height: 182px;
+		}
+		&:hover {
+			box-shadow: 0 0 3px #fff;
+		}
+		&:focus {
+			border-color: #86A8FF;
 		}
 	}
 	&__input-title {
@@ -245,6 +256,40 @@ body._lock {
 .brown{background: #4A3221;}
 .black{background: #000000;}
 
+.breadcrumbs {
+	padding: 32px 0 24px;
+	&__list {
+		@include flex-ai-center;
+		flex-wrap: wrap;
+	}
+	&__link {
+		font-family: 'Manrope';
+		line-height: 19px;
+		color: #C8D2DC;
+		&:hover {
+			opacity: 0.7;
+		}
+		&::after {
+			content: url("@img/icons/breacrumbs_arrow.svg");
+			margin: 0 9px;
+		}
+		&:last-child {
+			opacity: 1;
+			cursor: default;
+			pointer-events: none;
+			&::after {
+				display: none;
+			}
+		}
+	}
+}
+
+@media ($width991) {
+	.breadcrumbs {
+		padding: 96px 0 32px;
+	}
+}
+
 @media ($width991) {
 	.title {
 		font-size: 48px;
@@ -298,6 +343,9 @@ body._lock {
 		}
 		&_arts {
 			background: url("@img/blur-b_arts_m.png") 0 100px no-repeat;
+		}
+		&_product {
+			background-image: none!important;
 		}
 	}
 	.container {
