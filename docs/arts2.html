@@ -11,7 +11,7 @@
 </head>
 
 <body>
-	<div class="wrapper">
+	<div class="wrapper wrapper_arts">
 		<header class="header">
 	<div class="container container_big">
 		<div class="header__row">
@@ -77,21 +77,47 @@
 </header>
 
 
-		<section class="inspire">
+		<section class="arts-hero">
 			<div class="container">
-				<h1 class="inspire__title title">Art which inspire</h1>
-				<div class="inspire__text text">Indulgence announcing uncommonly met she continuing two unpleasing
-					terminated</div>
+				<div class="arts-hero__row">
+					<div class="arts-hero__body">
+						<h1 class="arts-hero__title title">Are you ready to get custom clothes? </h1>
+						<p class="arts-hero__text text">
+							Indulgence announcing uncommonly met she continuing two unpleasing terminated
+						</p>
+						<a href="#" class="arts-hero__btn btn btn_light">
+							<img loading="lazy" src="img/icons/bag.svg" alt="Bag icon" class="arts-hero__btn-icon">
+							<span>Get custom now</span>
+						</a>
+					</div>
+					<div class="arts-hero__image-wrap">
+						<picture>
+							<source media="(max-width: 575px)" srcset="img/arts-hero_img_m.png" type="image/webp">
+							<!-- <source media="(max-width: 767px)" srcset="img/arts-hero_img_m.png" type="image/png"> -->
+							<img src="img/arts-hero_img.png" alt="NFT Image" class="arts-hero__image">
+						</picture>
+					</div>
+				</div>
+			</div>
 
-				<p class="text-bg text-bg_1">MAKE ART</p>
-				<p class="text-bg text-bg_2">NOT WAR</p>
-				<img loading="lazy" src="img/icons/home_hero-star.svg" alt="Star" class="inspire__star star">
-				<div class="inspire__bubble bubble"></div>
+			<p class="text-bg text-bg_1">CUTOM BY YOUR OWN</p>
+			<p class="text-bg text-bg_2">UNIQUE CLOTHES</p>
 
+			<img loading="lazy" src="img/icons/home_hero-star.svg" alt="Star"
+				class="arts-hero__star arts-hero__star_1 star">
+			<img loading="lazy" src="img/icons/home_hero-star.svg" alt="Star"
+				class="arts-hero__star arts-hero__star_2 star">
+
+			<div class="arts-hero__bubble bubble"></div>
+		</section>
+
+		<section class="arts-gallery">
+			<div class="container">
 				<div class="gallery">
 	<div class="gallery__list gallery__list_big">
-		<div class="gallery__item gallery__item_big">
-			<picture><source srcset="img/gallery_img-big.webp" type="image/webp"><img src="img/gallery_img-big.jpg" alt="NFT Item" class="gallery__image"></picture>
+		<div class="gallery__item">
+			<picture><source srcset="img/gallery_img-small.webp" type="image/webp"><img src="img/gallery_img-small.jpg" alt="NFT Item" class="gallery__image"></picture>
+
 			<div class="gallery__item-info">
 				<h2 class="gallery__item-title">Title of picture </h2>
 				<p class="gallery__item-text">
@@ -109,18 +135,24 @@
 				</div>
 			</div>
 		</div>
-		<div class="gallery__item _lock">
-			<picture><source srcset="img/gallery-lock.webp" type="image/webp"><img src="img/gallery-lock.png" alt="NFT Item" class="gallery__image"></picture>
-			<div class="gallery__item-info _lock">
-				<h2 class="gallery__item-subtitle subtitle"><span>avalaible for premium</span></h2>
-				<h2 class="gallery__item-title">
-					<img src="img/icons/lock-gallery.svg" alt="lock">
-					<span>CONTENT LOCKED</span>
-				</h2>
-				<a href="#" class="gallery__item-btn btn btn_black">
-					<span>Unlock</span>
-					<img src="img/icons/arrow-gradient.svg" alt="arrow" class="gallery__btn-icon">
-				</a>
+		<div class="gallery__item gallery__item_big">
+			<picture><source srcset="img/gallery_img-big.webp" type="image/webp"><img src="img/gallery_img-big.jpg" alt="NFT Item" class="gallery__image"></picture>
+
+			<div class="gallery__item-info">
+				<h2 class="gallery__item-title">Title of picture </h2>
+				<p class="gallery__item-text">
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit ipsum dolor ipsum dolor
+				</p>
+				<h3 class="gallery__item-price">$100 322</h3>
+				<div class="gallery__btn-wrap">
+					<a href="#" class="gallery__item-btn gallery__item-btn_buy btn btn_black">
+						<span>Buy</span>
+					</a>
+					<a href="#" class="gallery__item-btn btn btn_black">
+						<span>View</span>
+						<img src="img/icons/arrow-gradient.svg" alt="arrow" class="gallery__btn-icon">
+					</a>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -187,9 +219,8 @@
 		</div>
 	</div>
 	<div class="gallery__list gallery__list_big">
-		<div class="gallery__item">
-			<picture><source srcset="img/gallery_img-small.webp" type="image/webp"><img src="img/gallery_img-small.jpg" alt="NFT Item" class="gallery__image"></picture>
-
+		<div class="gallery__item gallery__item_big">
+			<picture><source srcset="img/gallery_img-big.webp" type="image/webp"><img src="img/gallery_img-big.jpg" alt="NFT Item" class="gallery__image"></picture>
 			<div class="gallery__item-info">
 				<h2 class="gallery__item-title">Title of picture </h2>
 				<p class="gallery__item-text">
@@ -207,8 +238,8 @@
 				</div>
 			</div>
 		</div>
-		<div class="gallery__item gallery__item_big">
-			<picture><source srcset="img/gallery_img-big.webp" type="image/webp"><img src="img/gallery_img-big.jpg" alt="NFT Item" class="gallery__image"></picture>
+		<div class="gallery__item">
+			<picture><source srcset="img/gallery_img-small.webp" type="image/webp"><img src="img/gallery_img-small.jpg" alt="NFT Item" class="gallery__image"></picture>
 
 			<div class="gallery__item-info">
 				<h2 class="gallery__item-title">Title of picture </h2>
@@ -294,6 +325,94 @@
 			</div>
 		</section>
 
+		<section class="contact">
+	<div class="container container_contacts">
+		<h2 class="contact__subtitle subtitle">
+			<span>CUSTOM BY YOUR OWN</span>
+		</h2>
+		<h2 class="contact__title title-small">Want to get your own?</h2>
+		<form action="#" class="contact__form form" id="send-question">
+			<div class="form__wrapper">
+				<div class="form__input-wrap">
+					<p class="form__input-title">Type of item</p>
+					<div class="form__select select">
+						<div class="select__header">
+							<p class="select__current">T-SHIRT</p>
+							<img src="img/icons/select-contact.svg" alt="icon" class="select__icon">
+						</div>
+						<ul class="select__body">
+							<li class="select__item">
+								SHORT
+							</li>
+							<li class="select__item">
+								JACKET
+							</li>
+							<li class="select__item">
+								T-SHORT
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="form__input-wrap">
+					<p class="form__input-title">Color
+					<ul class="form__list-colors">
+						<li class="form__item-color red"></li>
+						<li class="form__item-color orange"></li>
+						<li class="form__item-color yellow"></li>
+						<li class="form__item-color green"></li>
+						<li class="form__item-color greenlight"></li>
+						<li class="form__item-color bluelight"></li>
+						<li class="form__item-color blue"></li>
+						<li class="form__item-color purple"></li>
+						<li class="form__item-color violet"></li>
+						<li class="form__item-color pink"></li>
+						<li class="form__item-color darkpink"></li>
+						<li class="form__item-color white"></li>
+						<li class="form__item-color grey"></li>
+						<li class="form__item-color brown"></li>
+						<li class="form__item-color black"></li>
+					</ul>
+				</div>
+				<div class="form__input-wrap">
+					<p class="form__input-title">Size</p>
+					<div class="form__select select">
+						<div class="select__header">
+							<p class="select__current">XL (99-99-99)</p>
+							<img src="img/icons/select-contact.svg" alt="icon" class="select__icon">
+						</div>
+						<ul class="select__body">
+							<li class="select__item">
+								L (99-99-99)
+							</li>
+							<li class="select__item">
+								M (99-99-99)
+							</li>
+							<li class="select__item">
+								XL (99-99-99)
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="form__input-wrap">
+					<p class="form__input-title">Your comment</p>
+					<textarea class="form__input form__input_text" maxlength="99999" name="Question"
+						axaria-label="send-question" placeholder="Comment" tabindex="3"></textarea>
+				</div>
+
+				<button class="form__btn btn btn_light" type="submit" aria-label="send-question">Send message</button>
+
+				<div class="form__checkbox-wrap">
+					<input id="checkbox" type="checkbox" class="form__input-checkbox" name="Question"
+						aria-label="send-question" placeholder="Your question" tabindex="3" hidden>
+					<label for="checkbox" class="form__custom-check">
+						<span>I agree with <a href="#" class="form__link">Privacy Policy</a> and <a href="#"
+								class="form__link">Terms of use</a></span>
+					</label>
+				</div>
+			</div>
+		</form>
+	</div>
+</section>
 		<footer class="footer">
 	<div class="container container_big">
 		<div class="footer__top">

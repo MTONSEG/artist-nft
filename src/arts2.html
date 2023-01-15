@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('./html/head.html',{title: "Artist NFT"})
+
+<body>
+	<div class="wrapper wrapper_arts">
+		@@include('./html/header.html',{})
+
+		<section class="arts-hero">
+			<div class="container">
+				<div class="arts-hero__row">
+					<div class="arts-hero__body">
+						<h1 class="arts-hero__title title">Are you ready to get custom clothes? </h1>
+						<p class="arts-hero__text text">
+							Indulgence announcing uncommonly met she continuing two unpleasing terminated
+						</p>
+						<a href="#" class="arts-hero__btn btn btn_light">
+							<img loading="lazy" src="@img/icons/bag.svg" alt="Bag icon" class="arts-hero__btn-icon">
+							<span>Get custom now</span>
+						</a>
+					</div>
+					<div class="arts-hero__image-wrap">
+						<picture>
+							<source media="(max-width: 575px)" srcset="@img/arts-hero_img_m.png" type="image/webp">
+							<!-- <source media="(max-width: 767px)" srcset="@img/arts-hero_img_m.png" type="image/png"> -->
+							<img src="@img/arts-hero_img.png" alt="NFT Image" class="arts-hero__image">
+						</picture>
+					</div>
+				</div>
+			</div>
+
+			<p class="text-bg text-bg_1">CUTOM BY YOUR OWN</p>
+			<p class="text-bg text-bg_2">UNIQUE CLOTHES</p>
+
+			<img loading="lazy" src="@img/icons/home_hero-star.svg" alt="Star"
+				class="arts-hero__star arts-hero__star_1 star">
+			<img loading="lazy" src="@img/icons/home_hero-star.svg" alt="Star"
+				class="arts-hero__star arts-hero__star_2 star">
+
+			<div class="arts-hero__bubble bubble"></div>
+		</section>
+
+		<section class="arts-gallery">
+			<div class="container">
+				@@include('./html/gallery-arts2.html',{})
+			</div>
+		</section>
+
+		@@include('./html/contact-art2.html',{})
+		@@include('./html/footer.html',{})
+	</div>
+	<script src="./js/app.min.js" type="module"></script>
+</body>
+
+</html>

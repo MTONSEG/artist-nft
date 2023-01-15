@@ -40,3 +40,21 @@ if (gallery) {
 
 	}
 }
+
+
+//Enter color item
+const listColors = document.querySelectorAll('.form__item-color');
+
+if (listColors) {
+	for (let color of listColors) {
+		color.addEventListener('click', e => {
+			let currentColor = e.target.closest('.form__item-color');
+
+			for (let item of listColors) {
+				removeClass(item, '_active');
+			}
+			
+			addClass(currentColor, '_active');
+		})
+	}
+}
