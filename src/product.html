@@ -20,7 +20,10 @@
 			<div class="container">
 				<div class="product__row">
 					<div class="product__image-wrap">
-						<img loading="lazy" src="@img/product__image.jpg" alt="Picture or NFT" class="product__image">
+						<picture>
+							<source media="(max-width: 767)" srcset="@img/product__image_m.webp" type="image/webp">
+							<img loading="lazy" src="@img/product__image.jpg" alt="Picture or NFT" class="product__image">
+						</picture>
 					</div>
 					<div class="product__body">
 						<h2 class="product__subtitle subtitle">

@@ -114,6 +114,10 @@
 		}
 		&__image-wrap {
 			margin: 0 auto 20px;
+			max-width: 375px;
+		}
+		&__image {
+			aspect-ratio: 1/1;
 		}
 		&__body {
 			padding: 0;

@@ -6,7 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="shortcut icon" href="img/icons/favicon-32.png" type="image/png">
 	<link type="image/png" sizes="16x16" rel="icon" href="./img/favicon.png">
-	<link media="all" rel="stylesheet" type="text/css" href="./css/style.min.css">
+	<link media="all" rel="stylesheet" type="text/css" href="./css/style.min.css?_v=20230116163319">
 	<title>Artist NFT</title>
 </head>
 
@@ -91,7 +91,10 @@
 			<div class="container">
 				<div class="product__row">
 					<div class="product__image-wrap">
-						<img loading="lazy" src="img/product__image.jpg" alt="Picture or NFT" class="product__image">
+						<picture>
+							<source media="(max-width: 767)" srcset="img/product__image_m.webp" type="image/webp">
+							<img loading="lazy" src="img/product__image.jpg" alt="Picture or NFT" class="product__image">
+						</picture>
 					</div>
 					<div class="product__body">
 						<h2 class="product__subtitle subtitle">
@@ -221,7 +224,7 @@
 	</div>
 </footer>
 	</div>
-	<script src="./js/app.min.js" type="module"></script>
+	<script src="./js/app.min.js?_v=20230116163319" type="module"></script>
 </body>
 
 </html>

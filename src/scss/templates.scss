@@ -22,6 +22,11 @@ body._lock {
 	&_product {
 		background: url("@img/blur-b_arts.png") 0 20px no-repeat;
 	}
+	&_auction {
+		background: 
+			url("@img/blur-b_arts.png") 0 20px no-repeat,
+			url("@img/blur-b_auction.png")100% 20px no-repeat;
+	}
 }
 
 .container {
@@ -30,6 +35,10 @@ body._lock {
 	padding: 0 15px;
 	&_big {
 		max-width: 1170px;
+	}
+	&_article {
+		padding: 0 13px 0 27px;
+		max-width: 1165px;
 	}
 }
 
@@ -298,6 +307,11 @@ body._lock {
 }
 
 @media ($width767) {
+	.container {
+		&_article {
+			padding: 0 15px;
+		}
+	}
 	.title {
 		font-size: 36px;
 		line-height: 40px;
@@ -345,6 +359,9 @@ body._lock {
 			background: url("@img/blur-b_arts_m.png") 0 100px no-repeat;
 		}
 		&_product {
+			background-image: none!important;
+		}
+		&_auction {
 			background-image: none!important;
 		}
 	}
