@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="shortcut icon" href="img/icons/favicon-32.png" type="image/png">
+	<link type="image/png" sizes="16x16" rel="icon" href="./img/favicon.png">
+	<link media="all" rel="stylesheet" type="text/css" href="./css/style.min.css?_v=20230116185355">
+	<title>Artist NFT</title>
+</head>
+
+<body>
+	<div class="wrapper">
+		<header class="header">
+	<div class="container container_big">
+		<div class="header__row">
+			<a href="index.html" class="header__logo-link">
+				<img loading="lazy" src="img/icons/logo.svg" alt="logo" class="header__logo">
+			</a>
+
+			<nav class="header__menu menu">
+				<div class="menu__close"></div>
+				<ul class="menu__list">
+					<li class="menu__item">
+						<a href="#" class="menu__link">Main page</a>
+					</li>
+					<li class="menu__item">
+						<a href="#" class="menu__link menu__link_lock">NFT</a>
+					</li>
+					<li class="menu__item">
+						<a href="#" class="menu__link">Pictures</a>
+					</li>
+					<li class="menu__item">
+						<a href="#" class="menu__link">Auction</a>
+					</li>
+					<li class="menu__item">
+						<a href="#" class="menu__link">Pricing</a>
+					</li>
+					<li class="menu__item">
+						<a href="#" class="menu__link">Contacts</a>
+					</li>
+					<li class="menu__item">
+						<a href="#" class="menu__link">Blog</a>
+					</li>
+				</ul>
+
+				<div class="menu__buttons">
+					<div class="menu__select select">
+						<div class="select__header">
+							<p class="select__current">eng</p>
+							<img loading="lazy" src="img/icons/select-arr.svg" alt="icon" class="select__icon">
+						</div>
+						<ul class="select__body">
+							<li class="select__item">ua</li>
+							<li class="select__item">eng</li>
+							<li class="select__item">pl</li>
+						</ul>
+					</div>
+					<a href="#" class="menu__author-btn btn btn_dark">
+						<span>Authorization</span>
+					</a>
+				</div>
+			</nav>
+
+
+			<div class="header__buttons">
+				<a href="#" class="header__prem-btn btn btn_light">
+					<span>Premium access</span>
+				</a>
+				<div class="menu-btn">
+					<img loading="lazy" src="img/icons/menu.svg" alt="Menu" class="menu-btn__icon">
+				</div>
+			</div>
+		</div>
+	</div>
+</header>
+
+
+		<section class="payment">
+			<div class="container">
+				<div class="payment__row">
+					<div class="payment__form">
+						<h2 class="payment__subtitle subtitle">
+							<span>PURCHASE</span>
+						</h2>
+						<h1 class="payment__title title-small">
+							Payment for <span> Name of NFT or art</span>
+						</h1>
+
+						<form action="#" class="form">
+							<div class="payment__tabs">
+								<a data-tab="#card" href="#" class="payment__tab">Credit card</a>
+								<a data-tab="#paypal" href="#" class="payment__tab">PayPal</a>
+								<a data-tab="#crypto" href="#" class="payment__tab">Crypto</a>
+								<div class="payment__indicator-wrap">
+									<div class="payment__indicator"></div>
+								</div>
+							</div>
+
+							<div id="card" class="payment__form-body">
+								<div class="form__wrapper">
+									<div class="form__input-wrap">
+										<p class="form__input-title">Card number</p>
+										<input type="text" class="form__input" name="Card number" aria-label="Card number"
+											placeholder="0000 0000 0000 0000" tabindex="1">
+									</div>
+
+									<div class="form__small-wrap">
+										<div class="form__input-wrap">
+											<p class="form__input-title">Date</p>
+											<input type="number" class="form__input" name="Date" aria-label="Date"
+												placeholder="01/01" tabindex="1">
+										</div>
+										<div class="form__input-wrap">
+											<p class="form__input-title">CCV</p>
+											<input type="number" class="form__input" name="CCV" aria-label="CCV" placeholder="000"
+												tabindex="2">
+										</div>
+									</div>
+
+									<div class="form__input-wrap">
+										<p class="form__input-title">Name on card</p>
+										<input type="text" class="form__input" name="Name on Card" aria-label="Name on card"
+											placeholder="Ivan Ivanov" tabindex="2">
+									</div>
+
+									<button class="form__btn btn btn_light" type="submit" aria-label="send-question">
+										Purchase
+									</button>
+
+									<div class="form__checkbox-wrap">
+										<input id="checkbox-card" type="checkbox" class="form__input-checkbox" name="Question"
+											aria-label="send-question" placeholder="Your question" tabindex="3" hidden>
+										<label for="checkbox-card" class="form__custom-check">
+											<span>I agree with <a href="#" class="form__link">Privacy Policy</a> and <a href="#"
+													class="form__link">Terms of use</a></span>
+										</label>
+									</div>
+								</div>
+							</div>
+							<div id="paypal" class="payment__form-body">
+								<div class="form__wrapper">
+									<div class="form__input-wrap">
+										<p class="form__input-title">E-mail</p>
+										<input type="email" class="form__input" name="Mail" aria-label="Your e-mail"
+											placeholder="Your e-mail" tabindex="1">
+									</div>
+
+									<button class="form__btn btn btn_light" type="submit" aria-label="send-question">
+										Purchase
+									</button>
+
+									<div class="form__checkbox-wrap">
+										<input id="checkbox-paypal" type="checkbox" class="form__input-checkbox" name="Question"
+											aria-label="send-question" placeholder="Your question" tabindex="3" hidden>
+										<label for="checkbox-paypal" class="form__custom-check">
+											<span>I agree with <a href="#" class="form__link">Privacy Policy</a> and <a href="#"
+													class="form__link">Terms of use</a></span>
+										</label>
+									</div>
+								</div>
+							</div>
+							<div id="crypto" class="payment__form-body">
+								<div class="form__wrapper">
+									<div class="form__input-wrap">
+										<p class="form__input-title">
+											To purchase item by crypto you have to send money to this wallet. After 5 minute result
+											will sent in your mail
+										</p>
+										<p class="form__input form__input_crypto">
+											<span>EQBSSl0Xlo3...kkHTmFw5YVYOiWJ.</span>
+											<img src="img/icons/file-copy.svg" alt="copy" class="form__copy-icon">
+										</p>
+									</div>
+
+									<div class="form__input-wrap">
+										<p class="form__input-title">E-mail</p>
+										<input type="email" class="form__input" name="Mail" aria-label="Your e-mail"
+											placeholder="Your e-mail" tabindex="2">
+									</div>
+
+									<button class="form__btn btn btn_light" type="submit" aria-label="send-question">
+										Check
+									</button>
+
+									<div class="form__checkbox-wrap">
+										<input id="checkbox-crypto" type="checkbox" class="form__input-checkbox" name="Question"
+											aria-label="send-question" placeholder="Your question" tabindex="3" hidden>
+										<label for="checkbox-crypto" class="form__custom-check">
+											<span>I agree with <a href="#" class="form__link">Privacy Policy</a> and <a href="#"
+													class="form__link">Terms of use</a></span>
+										</label>
+									</div>
+								</div>
+							</div>
+						</form>
+					</div>
+
+					<div class="payment__info pay-info">
+						<p class="pay-info__title">
+							Name of NFT or Art placed here
+						</p>
+						<div class="pay-info__cost">
+							<div class="pay-info__price">
+								<h3 class="pay-info__price-title subtitle">
+									<span>PRICE</span>
+								</h3>
+								<p class="pay-info__price-value">$100 322</p>
+							</div>
+							<div class="pay-info__bid">BID</div>
+						</div>
+
+						<h3 class="pay-info__block-title subtitle">
+							<span>DETAILED INFO</span>
+						</h3>
+						<ul class="pay-info__list">
+							<li class="pay-info__item">
+								36 × 27 in<br>
+								91.4 × 68.6 cm
+							</li>
+							<li class="pay-info__item">
+								This work is part of a limited edition set.
+							</li>
+						</ul>
+
+						<div class="pay-info__text-wrap">
+							<p class="pay-info__text">
+								Kindness to he horrible reserved ye. Effect twenty indeed beyond for not had county. The use him
+								without greatly can private. Increasing it unpleasant no of contrasted no continuing. Nothing
+								colonel my no removed in weather. It dissimilar in up devonshire inhabiting.
+							</p>
+							<p class="pay-info__text">
+								If polite he active county in spirit an. Mrs ham intention promotion engrossed assurance
+								defective.
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<footer class="footer">
+	<div class="container container_big">
+		<div class="footer__top">
+			<a href="index.html" class="footer__logo header__logo-link">
+				<img loading="lazy" src="img/icons/logo.svg" alt="logo" class="header__logo">
+			</a>
+
+			<div class="footer__list">
+				<a href="#" class="footer__link">Privacy policy</a>
+				<a href="#" class="footer__link">Terms of use</a>
+			</div>
+
+			<div class="footer__soc body-hero__soc">
+				<a href="#" class="body-hero__soc-link">
+					<img loading="lazy" src="img/icons/inst.svg" alt="Instagram" class="body-hero__soc-icon">
+				</a>
+				<a href="#" class="body-hero__soc-link">
+					<img loading="lazy" src="img/icons/twitter.svg" alt="Twitter" class="body-hero__soc-icon">
+				</a>
+				<a href="#" class="body-hero__soc-link">
+					<img loading="lazy" src="img/icons/telegram.svg" alt="Telegram" class="body-hero__soc-icon">
+				</a>
+				<a href="#" class="body-hero__soc-link">
+					<img loading="lazy" src="img/icons/pinterest.svg" alt="Pinterest" class="body-hero__soc-icon">
+				</a>
+			</div>
+		</div>
+		<div class="footer__bottom">
+			All rights reserved © 2022
+		</div>
+	</div>
+</footer>
+	</div>
+	<script src="./js/app.min.js?_v=20230116185355" type="module"></script>
+</body>
+
+</html>

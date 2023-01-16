@@ -58,3 +58,42 @@ if (listColors) {
 		})
 	}
 }
+
+//payment form
+const tabBtns = Array.from(document.querySelectorAll('.payment__tab'));
+
+if (tabBtns) {
+	const tabContents = Array.from(document.querySelectorAll('.payment__form-body'));
+	const tabIndicator  = document.querySelector('.payment__indicator')
+
+	let amountTabs = tabBtns.length;
+
+	for (let btn of tabBtns) {
+		btn.addEventListener('click', e => {
+			let currentBtn = e.target.closest('.payment__tab');
+			let tabId = currentBtn.getAttribute('data-tab');
+			let currentContent = document.querySelector(tabId);
+
+			for (let btn of tabBtns) {
+				removeClass(btn, '_active');
+			}
+			
+			for (let content of tabContents) {
+				removeClass(content, '_active');
+			}
+
+			addClass(currentBtn, '_active');
+			addClass(currentContent, '_active');
+			changeIndicator(currentBtn);
+
+			e.preventDefault()
+		})
+	}
+
+	tabBtns[0].click();
+
+	function changeIndicator(btn) {
+		let indexBtn = tabBtns.indexOf(btn);
+		tabIndicator.style.left = `calc(${indexBtn} * 100% / ${amountTabs})`
+	}
+}

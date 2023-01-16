@@ -129,6 +129,10 @@ body._lock {
 	&__input-wrap {
 		margin-bottom: 15px;
 	}
+	&__small-wrap {
+		display: flex;
+		gap: 16px;
+	}
 	&__input {
 		display: block;
 		background: #212426;
@@ -148,12 +152,27 @@ body._lock {
 			resize: none;
 			height: 182px;
 		}
+		&_crypto {
+			font-weight: 700;
+			font-size: 14px;
+			line-height: 20px;
+			color: $base-color;
+			position: relative;
+		}
 		&:hover {
 			box-shadow: 0 0 3px #fff;
 		}
 		&:focus {
 			border-color: #86A8FF;
 		}
+	}
+	&__copy-icon {
+		width: 18px;
+		height: 18px;
+		position: absolute;
+		top: 50%;
+		right: 17px;
+		transform: translateY(-50%);
 	}
 	&__input-title {
 		color: #C8D2DC;
