@@ -1,10 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
-@@include('./html/head.html',{title: "Artist NFT"})
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="shortcut icon" href="img/icons/favicon-32.png" type="image/png">
+	<link type="image/png" sizes="16x16" rel="icon" href="./img/favicon.png">
+	<link media="all" rel="stylesheet" type="text/css" href="./css/style.min.css">
+	<title>Artist NFT</title>
+</head>
 
 <body>
 	<div class="wrapper wrapper_auction">
-		@@include('./html/header.html',{})
+		<header class="header">
+	<div class="container container_big">
+		<div class="header__row">
+			<a href="index.html" class="header__logo-link">
+				<img loading="lazy" src="img/icons/logo.svg" alt="logo" class="header__logo">
+			</a>
+
+			<nav class="header__menu menu">
+				<div class="menu__close"></div>
+				<ul class="menu__list">
+					<li class="menu__item">
+						<a href="#" class="menu__link">Main page</a>
+					</li>
+					<li class="menu__item">
+						<a href="#" class="menu__link menu__link_lock">NFT</a>
+					</li>
+					<li class="menu__item">
+						<a href="#" class="menu__link">Pictures</a>
+					</li>
+					<li class="menu__item">
+						<a href="#" class="menu__link">Auction</a>
+					</li>
+					<li class="menu__item">
+						<a href="#" class="menu__link">Pricing</a>
+					</li>
+					<li class="menu__item">
+						<a href="#" class="menu__link">Contacts</a>
+					</li>
+					<li class="menu__item">
+						<a href="#" class="menu__link">Blog</a>
+					</li>
+				</ul>
+
+				<div class="menu__buttons">
+					<div class="menu__select select">
+						<div class="select__header">
+							<p class="select__current">eng</p>
+							<img loading="lazy" src="img/icons/select-arr.svg" alt="icon" class="select__icon">
+						</div>
+						<ul class="select__body">
+							<li class="select__item">ua</li>
+							<li class="select__item">eng</li>
+							<li class="select__item">pl</li>
+						</ul>
+					</div>
+					<a href="#" class="menu__author-btn btn btn_dark">
+						<span>Authorization</span>
+					</a>
+				</div>
+			</nav>
+
+
+			<div class="header__buttons">
+				<a href="#" class="header__prem-btn btn btn_light">
+					<span>Premium access</span>
+				</a>
+				<div class="menu-btn">
+					<img loading="lazy" src="img/icons/menu.svg" alt="Menu" class="menu-btn__icon">
+				</div>
+			</div>
+		</div>
+	</div>
+</header>
+
 
 		<section class="pricing">
 			<div class="container">
@@ -35,7 +106,7 @@
 									<p class="pricing__text-item">Purchasing this access you get</p>
 
 								</div>
-								<img src="@img/cristal-1.png" alt="Cristal"
+								<img src="img/cristal-1.png" alt="Cristal"
 									class="pricing__item-image pricing__item-image_image1">
 							</div>
 							<ul class="pricing__list-item">
@@ -71,7 +142,7 @@
 									<p class="pricing__text-item">Purchasing this access you get</p>
 
 								</div>
-								<img src="@img/cristal-2.png" alt="Cristal"
+								<img src="img/cristal-2.png" alt="Cristal"
 									class="pricing__item-image pricing__item-image_image2">
 							</div>
 							<ul class="pricing__list-item">
@@ -110,7 +181,7 @@
 									<p class="pricing__text-item">Purchasing this access you get</p>
 
 								</div>
-								<img src="@img/cristal-3.png" alt="Cristal"
+								<img src="img/cristal-3.png" alt="Cristal"
 									class="pricing__item-image pricing__item-image_image3">
 							</div>
 							<ul class="pricing__list-item">
@@ -143,7 +214,38 @@
 			</div>
 		</section>
 
-		@@include('./html/footer.html',{})
+		<footer class="footer">
+	<div class="container container_big">
+		<div class="footer__top">
+			<a href="index.html" class="footer__logo header__logo-link">
+				<img loading="lazy" src="img/icons/logo.svg" alt="logo" class="header__logo">
+			</a>
+
+			<div class="footer__list">
+				<a href="#" class="footer__link">Privacy policy</a>
+				<a href="#" class="footer__link">Terms of use</a>
+			</div>
+
+			<div class="footer__soc body-hero__soc">
+				<a href="#" class="body-hero__soc-link">
+					<img loading="lazy" src="img/icons/inst.svg" alt="Instagram" class="body-hero__soc-icon">
+				</a>
+				<a href="#" class="body-hero__soc-link">
+					<img loading="lazy" src="img/icons/twitter.svg" alt="Twitter" class="body-hero__soc-icon">
+				</a>
+				<a href="#" class="body-hero__soc-link">
+					<img loading="lazy" src="img/icons/telegram.svg" alt="Telegram" class="body-hero__soc-icon">
+				</a>
+				<a href="#" class="body-hero__soc-link">
+					<img loading="lazy" src="img/icons/pinterest.svg" alt="Pinterest" class="body-hero__soc-icon">
+				</a>
+			</div>
+		</div>
+		<div class="footer__bottom">
+			All rights reserved © 2022
+		</div>
+	</div>
+</footer>
 	</div>
 	<script src="./js/app.min.js" type="module"></script>
 </body>

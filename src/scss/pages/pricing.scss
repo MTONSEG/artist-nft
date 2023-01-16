@@ -1,0 +1,142 @@
+.pricing {
+	padding: 62px 0 50px;
+	&__head {
+		margin-bottom: 78px;
+	}
+	&__title,
+	&__text {
+		margin: 0 auto;
+		text-align: center;
+	}
+	&__title {
+		max-width: 569px;
+		margin-bottom: 16px;
+	}
+	&__text {
+		max-width: 415px;
+	}
+	&__tabs {
+		display: none;
+	}
+	&__list {
+		display: flex;
+		align-items: start;
+		justify-content: space-between;
+	}
+	&__item {
+		background: #212426;
+		border-radius: 12px;
+		max-width: 350px;
+		overflow: hidden;
+		&._year {
+			background: 
+				linear-gradient(94.78deg, #00ADC5 9.27%, #AD7AFF 84.06%) padding-box, linear-gradient(94.78deg, #057483 9.27%, #AD7AFF 84.06%) border-box;
+				border: 5px solid transparent;
+				transform: translateY(-40px);
+			& .pricing__head-item {
+				background: linear-gradient(94.78deg, #00ADC5 9.27%, #AD7AFF 84.06%);
+			}
+			& .pricing__btn {
+				background: #1D1F21;
+				span {
+					@include gradientFont;
+				}
+			}
+			& .pricing__block-item::before {
+				content: url("@img/icons/diamond-year.svg");
+			}
+			& .pricing__list-item {
+				padding: 27px 22px 31px;
+			}
+			& .pricing__price-item {
+				padding-bottom: 13px;
+			}
+			& .pricing__label {
+				padding-top: 8px;
+			}
+		}
+		
+	}
+	
+	
+	&__label {
+		text-align: center;
+		position: static;
+		padding: 13px 15px 0;
+		margin-bottom: 44px;
+	}
+	&__top-item {
+		position: relative;
+		background: #212426;
+	}
+	&__item-image {
+		display: block;
+		position: absolute;
+		left: 0;
+		top: 0;
+	}
+	&__head-item {
+		background: linear-gradient(94.78deg, #68C9FF 9.27%, #D1B5FF 84.06%);
+		border-radius: 8px 0px 0px 8px;
+		max-width: 275px;
+		margin: 0 0 0 auto;
+		padding: 14px 25px 15px;
+		color: $bg-color;
+		position: relative;
+		z-index: 1;
+	}
+	&__title-item {
+		line-height: 34px;
+		font-size: 26px;
+	}
+	&__list-item {
+		padding: 27px 27px 31px;
+		background: #212426;
+		border-radius: 0px 0px 24px 24px;
+	}
+	&__block-item {
+		color: #C8D2DC;
+		line-height: 21px;
+		padding: 0 27px 10px 40px;
+		margin-bottom: 10px;
+		border-bottom: 1px solid #525960;
+		position: relative;
+		&::before {
+			content: url("@img/icons/diamond.svg");
+			position: absolute;
+			width: 24px;
+			height: 24px;
+			top: 40%;
+			left: 0;
+			transform: translateY(-50%);
+		}
+		&:last-child {
+			margin-bottom: 0;
+			border: 0;
+		}
+	}
+	&__price-item {
+		@include flex-center-between;
+		padding: 14px 37px 18px 26px;
+	}
+	&__btn {
+		font-weight: 700;
+		font-size: 18px;
+		line-height: 26px;
+		color: #1D1F21;
+		padding: 14px 20px 15px;
+		width: 100%;
+		max-width: 177px;
+	}
+	&__price-value {
+		font-weight: 700;
+		font-size: 22px;
+		line-height: 34px;
+	}
+}
+
+@media ($width1220) {
+	.pricing {
+		padding: 100px 0 36px;
+	}
+}
