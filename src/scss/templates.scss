@@ -158,6 +158,30 @@ body._lock {
 			line-height: 20px;
 			color: $base-color;
 			position: relative;
+			overflow: hidden;
+			&::before {
+				content: "Copied to clipboard";
+				position: absolute;
+				top: -100%;
+				width: 50%;
+				left: 50%;
+				transform: translateX(-50%);
+				border-radius: 0 0 8px 8px;
+				background: $gradientLight;
+				color: black;
+				text-align: center;
+				opacity: 0;
+				visibility: hidden;
+				pointer-events: none;
+				transition: 0.5s all;
+				font-size: 10px;
+				line-height: 12px;
+			}
+			&._active::before {
+				top: 0;
+				opacity: 1;
+				visibility: visible;
+			}
 		}
 		&:hover {
 			box-shadow: 0 0 3px #fff;
@@ -167,12 +191,18 @@ body._lock {
 		}
 	}
 	&__copy-icon {
-		width: 18px;
-		height: 18px;
+		width: 13.5px;
+		height: 15px;
 		position: absolute;
 		top: 50%;
 		right: 17px;
 		transform: translateY(-50%);
+		cursor: pointer;
+		@include transition2s;
+		&:hover {
+			top: 40%;
+			transform: scale(1.5);
+		}
 	}
 	&__input-title {
 		color: #C8D2DC;
@@ -192,6 +222,7 @@ body._lock {
 		color: #C8D2DC;
 		width: 100%;
 		@include flex-ai-center;
+		cursor: pointer;
 		&::before {
 			content: "";
 			width: 20px;

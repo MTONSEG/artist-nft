@@ -97,3 +97,19 @@ if (tabBtns) {
 		tabIndicator.style.left = `calc(${indexBtn} * 100% / ${amountTabs})`
 	}
 }
+
+let copyWallet = document.querySelector('.form__copy-icon');
+
+if (copyWallet) {
+	let wallet = document.querySelector('.cripto-wallet');
+
+	copyWallet.addEventListener('click', e => {
+		navigator.clipboard.writeText(wallet.innerHTML);
+		
+		addClass(copyWallet.parentElement, '_active');
+
+		setTimeout(() => {
+			removeClass(copyWallet.parentElement, '_active');
+		}, 1000)
+	})
+}

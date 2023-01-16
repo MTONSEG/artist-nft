@@ -551,6 +551,37 @@ body._lock {
   line-height: 20px;
   color: #FCFFFF;
   position: relative;
+  overflow: hidden;
+}
+
+.form__input_crypto::before {
+  content: "Copied to clipboard";
+  position: absolute;
+  top: -100%;
+  width: 50%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+  border-radius: 0 0 8px 8px;
+  background: -o-linear-gradient(355.22deg, #68C9FF 9.27%, #D1B5FF 84.06%);
+  background: linear-gradient(94.78deg, #68C9FF 9.27%, #D1B5FF 84.06%);
+  color: black;
+  text-align: center;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  -webkit-transition: 0.5s all;
+  -o-transition: 0.5s all;
+  transition: 0.5s all;
+  font-size: 10px;
+  line-height: 12px;
+}
+
+.form__input_crypto._active::before {
+  top: 0;
+  opacity: 1;
+  visibility: visible;
 }
 
 .form__input:hover {
@@ -563,14 +594,25 @@ body._lock {
 }
 
 .form__copy-icon {
-  width: 18px;
-  height: 18px;
+  width: 13.5px;
+  height: 15px;
   position: absolute;
   top: 50%;
   right: 17px;
   -webkit-transform: translateY(-50%);
       -ms-transform: translateY(-50%);
           transform: translateY(-50%);
+  cursor: pointer;
+  -webkit-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.form__copy-icon:hover {
+  top: 40%;
+  -webkit-transform: scale(1.5);
+      -ms-transform: scale(1.5);
+          transform: scale(1.5);
 }
 
 .form__input-title {
@@ -598,6 +640,7 @@ body._lock {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  cursor: pointer;
 }
 
 .form__custom-check::before {
