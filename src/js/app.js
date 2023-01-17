@@ -132,3 +132,15 @@ if (copyWallet) {
 	})
 }
 
+//active premium content
+const unlockBtn = document.querySelector('.unlock-btn');
+
+if (unlockBtn) {
+	unlockBtn.addEventListener('click', e => {
+		let premiumContent = document.querySelector('.product-content__unlocked');
+
+		addClass(premiumContent, '_active');
+
+		e.preventDefault();
+	})
+}
