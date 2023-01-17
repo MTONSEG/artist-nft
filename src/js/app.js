@@ -20,6 +20,19 @@ const nftSlider = new Swiper('.nft-slider', {
 			centeredSlides: true,
 		}
 	}
+});
+
+const forumSlider = new Swiper('.forum-body__slider', {
+	slidesPerView: 'auto',
+	spaceBetween: 10,
+	breakpoints: {
+		374: {
+			spaceBetween: 14,
+		},
+		991: {
+			spaceBetween: 30,
+		}
+	}
 })
 
 
@@ -118,3 +131,4 @@ if (copyWallet) {
 		}
 	})
 }
+
