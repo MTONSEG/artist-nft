@@ -1,0 +1,143 @@
+.nfts {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	gap: 24px 30px;
+	margin-bottom: 54px;
+	&__item {
+		width: 100%;
+		&:hover {
+			transform: translateY(0);
+			box-shadow: 0 0 25px rgb(70, 27, 189);
+		}
+	}
+	& .nft-item {
+		&__image-wrap {
+			width: 100%;
+		}
+	}
+}
+
+.nav-nfts,
+.nav-nfts__pages,
+.nav-nfts__num-page {
+	@include flex-ai-center;
+}
+
+.nav-nfts {
+	justify-content: center;
+	margin: 0 auto;
+	gap: 55px;
+	&__pages {
+		gap: 9px;
+	}
+	&__btn,
+	&__num-page {
+		width: 48px;
+		height: 48px;
+		background: #212426;
+		border-radius: 10px;
+		justify-content: center;
+		cursor: pointer;
+		@include transition3s;
+		&:hover {
+			box-shadow: 0 0 5px rgb(180, 147, 241);
+		}
+	}
+	&__btn {
+		border: 2px solid #525960;
+		position: relative;
+		&_prev::before,
+		&_next::before {
+			position: absolute;
+			top: 42%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			width: 10.5px;
+			height: 6.25px;
+		}
+		&_prev::before {
+			content: url("@img/icons/nav-prev.svg");
+		} 
+		&_next::before {
+			content: url("@img/icons/nav-next.svg");
+		} 
+	}
+	&__num-page {
+		font-weight: 700;
+		font-size: 20px;
+		line-height: 30px;
+		color: #fff;
+		&._active {
+			background: $gradientLight;
+			color: #000;
+			cursor: default;
+			&:hover {
+				box-shadow: none;
+			}
+		}
+	}
+}
+
+@media ($width767) {
+	.nfts {
+		grid-template-columns: repeat(auto-fit, minmax(163px, 1fr));
+		gap: 26px 19px;
+		margin-bottom: 38px;
+		& .nft-item {
+			padding: 0;
+			&__image-wrap {
+				width: 100%;
+				height: 163px;
+				margin-bottom: 0;
+			}
+			&__body {
+				padding: 0 11px 0;
+			}
+			&__header {
+				padding: 7px 11px 0;
+				font-size: 12px;
+				line-height: 20px;
+			}
+			&__title {
+				font-size: 13px;
+				line-height: 17px;
+			}
+			&__text {
+				font-size: 10px;
+				line-height: 16px;
+				margin-bottom: 6px;
+			}
+			&__buy {
+				padding: 0;
+				flex-direction: column;
+				align-items: flex-start;
+				gap: 7px;
+			}
+			&__price {
+				font-size: 14px;
+				line-height: 24px;
+			}
+			&__btn {
+				font-size: 12px;
+				line-height: 20px;
+				width: 100%;
+				padding: 7px 10px
+			}
+		}
+	}
+	.nav-nfts {
+		gap: 15px;
+		&__btn,
+		&__num-page {
+			width: 40px;
+			height: 40px;
+			font-size: 18px;
+			line-height: 26px;
+		}
+		&__btn {
+			&::before {
+				top: 22%;
+			}
+		}
+	}
+}

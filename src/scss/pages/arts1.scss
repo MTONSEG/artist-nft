@@ -2,16 +2,23 @@
 	position: relative;
 	padding: 62px 0 76px;
 	background: url('@img/blur-b2.png') center -134px no-repeat;
+	&_nfts {
+		padding: 48px 0 63px;
+	}
 	&__title,
 	&__text {
 		text-align: center;
 	}
 	&__title {
-		margin-bottom: 16px;
+		max-width: 569px;
+		margin: 0 auto 16px;
 	}
 	&__text {
 		max-width: 415px;
 		margin: 0 auto 49px;
+		&_nfts {
+			margin: 0 auto 51px;
+		}
 	}
 	& .text-bg {
 		&_1 {
@@ -188,6 +195,12 @@
 @media ($width767) {
 	.inspire {
 		background: transparent !important;
+		&_nfts {
+			padding: 90px 0 55px;
+		}
+		&__text_nfts {
+			margin: 0px auto 44px;
+		}
 	}
 	.gallery {
 		&__list {

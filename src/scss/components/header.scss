@@ -58,6 +58,13 @@
 				left: 12px;
 			}
 		}
+		&._active {
+			background: $gradientDark;
+			span {
+				font-weight: 700;
+				@include gradientFont;
+			}
+		}
 		&:hover {
 			background: $gradientDark;
 		}
