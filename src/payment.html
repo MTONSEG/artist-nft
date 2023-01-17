@@ -19,15 +19,15 @@
 
 						<form action="#" class="form">
 							<div class="payment__tabs">
-								<a data-tab="#card" href="#" class="payment__tab">Credit card</a>
-								<a data-tab="#paypal" href="#" class="payment__tab">PayPal</a>
-								<a data-tab="#crypto" href="#" class="payment__tab">Crypto</a>
+								<a data-tab="#card" href="#" class="payment__tab tab _active">Credit card</a>
+								<a data-tab="#paypal" href="#" class="payment__tab tab">PayPal</a>
+								<a data-tab="#crypto" href="#" class="payment__tab tab">Crypto</a>
 								<div class="payment__indicator-wrap">
-									<div class="payment__indicator"></div>
+									<div class="payment__indicator tab-indicator"></div>
 								</div>
 							</div>
 
-							<div id="card" class="payment__form-body">
+							<div id="card" class="payment__form-body tab-content _active">
 								<div class="form__wrapper">
 									<div class="form__input-wrap">
 										<p class="form__input-title">Card number</p>
@@ -68,7 +68,7 @@
 									</div>
 								</div>
 							</div>
-							<div id="paypal" class="payment__form-body">
+							<div id="paypal" class="payment__form-body tab-content">
 								<div class="form__wrapper">
 									<div class="form__input-wrap">
 										<p class="form__input-title">E-mail</p>
@@ -90,7 +90,7 @@
 									</div>
 								</div>
 							</div>
-							<div id="crypto" class="payment__form-body">
+							<div id="crypto" class="payment__form-body tab-content">
 								<div class="form__wrapper">
 									<div class="form__input-wrap">
 										<p class="form__input-title">

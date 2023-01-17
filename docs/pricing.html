@@ -6,12 +6,12 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="shortcut icon" href="img/icons/favicon-32.png" type="image/png">
 	<link type="image/png" sizes="16x16" rel="icon" href="./img/favicon.png">
-	<link media="all" rel="stylesheet" type="text/css" href="./css/style.min.css">
+	<link media="all" rel="stylesheet" type="text/css" href="./css/style.min.css?_v=20230117134941">
 	<title>Artist NFT</title>
 </head>
 
 <body>
-	<div class="wrapper wrapper_auction">
+	<div class="wrapper wrapper_pricing">
 		<header class="header">
 	<div class="container container_big">
 		<div class="header__row">
@@ -86,19 +86,24 @@
 					<p class="pricing__text text">
 						Indulgence announcing uncommonly met she continuing two unpleasing terminated
 					</p>
-				</div>
 
+					<p class="pricing__bg-text-1 text-bg">MAKE ART</p>
+					<p class="pricing__bg-text-2 text-bg">NOT WAR</p>
+
+					<img loading="lazy" src="img/icons/home_hero-star.svg" alt="Star" class="pricing__star star">
+					<div class="pricing__bubble bubble"></div>
+				</div>
 				<div class="pricing__body">
 					<div class="pricing__tabs payment__tabs">
-						<a data-tab="#week" href="#" class="payment__tab">One week</a>
-						<a data-tab="#month" href="#" class="payment__tab">Month</a>
-						<a data-tab="#year" href="#" class="payment__tab">Year</a>
+						<a data-tab="#week" href="#" class="payment__tab tab _active">One week</a>
+						<a data-tab="#month" href="#" class="payment__tab tab">Month</a>
+						<a data-tab="#year" href="#" class="payment__tab tab">Year</a>
 						<div class="payment__indicator-wrap">
-							<div class="payment__indicator"></div>
+							<div class="payment__indicator tab-indicator"></div>
 						</div>
 					</div>
 					<ul class="pricing__list">
-						<li id="week" class="pricing__item">
+						<li id="week" class="pricing__item tab-content _active">
 							<div class="pricing__top-item">
 								<h2 class="pricing__label text-bg">1 WEEK</h2>
 								<div class="pricing__head-item">
@@ -106,8 +111,11 @@
 									<p class="pricing__text-item">Purchasing this access you get</p>
 
 								</div>
-								<img src="img/cristal-1.png" alt="Cristal"
-									class="pricing__item-image pricing__item-image_image1">
+								<picture>
+									<source srcset="img/cristal-1.webp" type="image/webp">
+									<img src="img/cristal-1.png" alt="Cristal"
+										class="pricing__item-image pricing__item-image_image1">
+								</picture>
 							</div>
 							<ul class="pricing__list-item">
 								<li class="pricing__block-item">
@@ -134,7 +142,7 @@
 								<p class="pricing__price-value">$200.99</p>
 							</div>
 						</li>
-						<li id="year" class="pricing__item _year">
+						<li id="year" class="pricing__item _year tab-content">
 							<div class="pricing__top-item">
 								<h2 class="pricing__label text-bg">YEAR</h2>
 								<div class="pricing__head-item">
@@ -142,8 +150,11 @@
 									<p class="pricing__text-item">Purchasing this access you get</p>
 
 								</div>
-								<img src="img/cristal-2.png" alt="Cristal"
-									class="pricing__item-image pricing__item-image_image2">
+								<picture>
+									<source srcset="img/cristal-2.webp" type="image/webp">
+									<img src="img/cristal-2.png" alt="Cristal"
+										class="pricing__item-image pricing__item-image_image1">
+								</picture>
 							</div>
 							<ul class="pricing__list-item">
 								<li class="pricing__block-item">
@@ -173,7 +184,7 @@
 								<p class="pricing__price-value">$200.99</p>
 							</div>
 						</li>
-						<li id="month" class="pricing__item">
+						<li id="month" class="pricing__item tab-content">
 							<div class="pricing__top-item">
 								<h2 class="pricing__label text-bg">MONTH</h2>
 								<div class="pricing__head-item">
@@ -181,8 +192,11 @@
 									<p class="pricing__text-item">Purchasing this access you get</p>
 
 								</div>
-								<img src="img/cristal-3.png" alt="Cristal"
-									class="pricing__item-image pricing__item-image_image3">
+								<picture>
+									<source srcset="img/cristal-3.webp" type="image/webp">
+									<img src="img/cristal-3.png" alt="Cristal"
+										class="pricing__item-image pricing__item-image_image1">
+								</picture>
 							</div>
 							<ul class="pricing__list-item">
 								<li class="pricing__block-item">
@@ -247,7 +261,7 @@
 	</div>
 </footer>
 	</div>
-	<script src="./js/app.min.js" type="module"></script>
+	<script src="./js/app.min.js?_v=20230117134941" type="module"></script>
 </body>
 
 </html>

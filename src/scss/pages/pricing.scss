@@ -1,6 +1,7 @@
 .pricing {
 	padding: 62px 0 50px;
 	&__head {
+		position: relative;
 		margin-bottom: 78px;
 	}
 	&__title,
@@ -22,6 +23,7 @@
 		display: flex;
 		align-items: start;
 		justify-content: space-between;
+		gap: 10px;
 	}
 	&__item {
 		background: #212426;
@@ -46,7 +48,7 @@
 				content: url("@img/icons/diamond-year.svg");
 			}
 			& .pricing__list-item {
-				padding: 27px 22px 31px;
+				padding: 27px 22px 22px;
 			}
 			& .pricing__price-item {
 				padding-bottom: 13px;
@@ -63,7 +65,7 @@
 		text-align: center;
 		position: static;
 		padding: 13px 15px 0;
-		margin-bottom: 44px;
+		margin-bottom: 45px;
 	}
 	&__top-item {
 		position: relative;
@@ -74,13 +76,15 @@
 		position: absolute;
 		left: 0;
 		top: 0;
+		width: 227px;
+		height: 227px;
 	}
 	&__head-item {
 		background: linear-gradient(94.78deg, #68C9FF 9.27%, #D1B5FF 84.06%);
 		border-radius: 8px 0px 0px 8px;
 		max-width: 275px;
 		margin: 0 0 0 auto;
-		padding: 14px 25px 15px;
+		padding: 14px 25px 16px;
 		color: $bg-color;
 		position: relative;
 		z-index: 1;
@@ -90,7 +94,7 @@
 		font-size: 26px;
 	}
 	&__list-item {
-		padding: 27px 27px 31px;
+		padding: 27px 27px 22px;
 		background: #212426;
 		border-radius: 0px 0px 24px 24px;
 	}
@@ -98,7 +102,7 @@
 		color: #C8D2DC;
 		line-height: 21px;
 		padding: 0 27px 10px 40px;
-		margin-bottom: 10px;
+		margin-bottom: 9px;
 		border-bottom: 1px solid #525960;
 		position: relative;
 		&::before {
@@ -118,6 +122,7 @@
 	&__price-item {
 		@include flex-center-between;
 		padding: 14px 37px 18px 26px;
+		gap: 20px;
 	}
 	&__btn {
 		font-weight: 700;
@@ -133,10 +138,95 @@
 		font-size: 22px;
 		line-height: 34px;
 	}
+	&__star {
+		top: -13px;
+		left: 20.2%;
+	}
+	&__bubble {
+		right: 16.8%;
+		bottom: 45px;
+	}
+	&__bg-text-1 {
+		left: -203px;
+		top: 25px;
+	}
+	&__bg-text-2 {
+		right: -191px;
+		top: 25px;
+	}
 }
 
 @media ($width1220) {
 	.pricing {
 		padding: 100px 0 36px;
+	}
+}
+
+@media ($width991) {
+	.pricing {
+		&__head {
+			margin-bottom: 40px;
+		}
+		&__tabs {
+			display: flex;
+			margin: 0 auto 14px;
+			max-width: 400px;
+		}
+		&__item {
+			max-width: 400px;
+			margin: 0 auto;
+			display: none;
+			&._year {
+				transform: translateY(0);
+			}
+			&._active {
+				display: block;
+			}
+		}
+		&__bg-text-1,
+		&__bg-text-2 {
+			display: none;
+		}
+		&__star {
+			left: calc(100% - 31px);
+			top: -22px;
+		}
+		&__bubble {
+			right: 19px;
+			bottom: 1px;
+		}
+	}
+}
+
+@media ($width375) {
+	.pricing {
+		&__head {
+			margin-bottom: 14px;
+		}
+		&__head-item {
+			max-width: 270px;
+		}
+		&__title,
+		&__text {
+			max-width: 277px;
+			margin: 0;
+			text-align: left;
+		}
+		&__title {
+			max-width: 270px;
+			margin: 0 0 17px 3px;
+		}
+		&__label {
+			margin-bottom: 44px;
+		}
+		&__block-item {
+			padding: 0 12px 10px 40px;
+			&::before {
+				top: 43%;
+			}
+		}
+		&__price-item {
+			padding: 14px 32px 18px 26px;
+		}
 	}
 }

@@ -27,13 +27,13 @@ const nftSlider = new Swiper('.nft-slider', {
 const gallery = document.querySelector('.gallery');
 
 if (gallery) {
-	const galleryItems = gallery.querySelectorAll('.gallery__item'); 
+	const galleryItems = gallery.querySelectorAll('.gallery__item');
 
 	for (let item of galleryItems) {
 		item.addEventListener('mouseenter', e => {
 			addClass(item, '_active');
 		});
-		
+
 		item.addEventListener('mouseleave', e => {
 			removeClass(item, '_active');
 		})
@@ -53,31 +53,32 @@ if (listColors) {
 			for (let item of listColors) {
 				removeClass(item, '_active');
 			}
-			
+
 			addClass(currentColor, '_active');
 		})
 	}
 }
 
 //payment form
-const tabBtns = Array.from(document.querySelectorAll('.payment__tab'));
+const tabBtns = Array.from(document.querySelectorAll('.tab'));
 
 if (tabBtns) {
-	const tabContents = Array.from(document.querySelectorAll('.payment__form-body'));
-	const tabIndicator  = document.querySelector('.payment__indicator')
+	const tabContents = Array.from(document.querySelectorAll('.tab-content'));
+	const tabIndicator = document.querySelector('.tab-indicator')
 
+	
 	let amountTabs = tabBtns.length;
 
 	for (let btn of tabBtns) {
 		btn.addEventListener('click', e => {
-			let currentBtn = e.target.closest('.payment__tab');
+			let currentBtn = e.target.closest('.tab');
 			let tabId = currentBtn.getAttribute('data-tab');
 			let currentContent = document.querySelector(tabId);
 
 			for (let btn of tabBtns) {
 				removeClass(btn, '_active');
 			}
-			
+
 			for (let content of tabContents) {
 				removeClass(content, '_active');
 			}
@@ -90,7 +91,6 @@ if (tabBtns) {
 		})
 	}
 
-	tabBtns[0].click();
 
 	function changeIndicator(btn) {
 		let indexBtn = tabBtns.indexOf(btn);
@@ -98,18 +98,23 @@ if (tabBtns) {
 	}
 }
 
-let copyWallet = document.querySelector('.form__copy-icon');
+// wallet copy
+const copyWallet = document.querySelector('.form__copy-icon');
 
 if (copyWallet) {
 	let wallet = document.querySelector('.cripto-wallet');
 
 	copyWallet.addEventListener('click', e => {
 		navigator.clipboard.writeText(wallet.innerHTML);
-		
-		addClass(copyWallet.parentElement, '_active');
 
-		setTimeout(() => {
-			removeClass(copyWallet.parentElement, '_active');
-		}, 1000)
+		if (navigator.clipboard.writeText(wallet.innerHTML)) {
+			addClass(copyWallet.parentElement, '_active');
+
+			setTimeout(() => {
+				removeClass(copyWallet.parentElement, '_active');
+			}, 1000)
+		} else {
+			console.log('Not copied');
+		}
 	})
 }

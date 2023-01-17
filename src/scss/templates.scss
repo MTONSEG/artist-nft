@@ -27,6 +27,14 @@ body._lock {
 			url("@img/blur-b_arts.png") 0 20px no-repeat,
 			url("@img/blur-b_auction.png")100% 20px no-repeat;
 	}
+	&_pricing {
+		background: 
+			url("@img/blur-b_arts.png") 0 20px no-repeat,
+			url("@img/blur-b_auction.png")100% 20px no-repeat,
+			url("@img/cristal-bg-pricing.png") 0 223px no-repeat,
+			url("@img/cristal-bg-pricing-2.png") 77% 102px no-repeat,
+			url("@img/cristal-bg-pricing-3.png") 100% 216px no-repeat;
+	}
 }
 
 .container {
@@ -92,7 +100,7 @@ body._lock {
 
 .bubble {
 	border-radius: 100%;
-	border: 1px solid $base-color;
+	border: 1px solid rgba(252, 255, 255, 0.4);
 	background: transparent;
 	position: absolute;
 	width: 25px;
@@ -350,6 +358,13 @@ body._lock {
 }
 
 @media ($width991) {
+	.wrapper{
+		&_pricing {
+			background: 
+				url("@img/blur-b_pricing_m.png") 100% 32px no-repeat,
+				url("@img/cristal-bg-pricing_m.png") 100% 135px no-repeat;
+		}
+	}
 	.title {
 		font-size: 48px;
 		line-height: 55px;
@@ -385,6 +400,10 @@ body._lock {
 	.text-bg {
 		font-size: 50px;
 		line-height: 61px;
+		&.pricing__label {
+			font-size: 80px;
+			line-height: 97px;
+		}
 	}
 
 	.form {
