@@ -8,6 +8,7 @@ import * as burger from './modules/menu.js';
 
 isWebp();
 
+//Swiper Sliders
 import Swiper, { Navigation, Pagination } from 'swiper';
 
 const nftSlider = new Swiper('.nft-slider', {

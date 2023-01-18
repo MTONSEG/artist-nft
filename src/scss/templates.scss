@@ -3,7 +3,6 @@ body._lock {
 }
 
 .wrapper {
-	overflow: hidden;
 	margin: 0 auto;
 	max-width: 2560px;
 	min-height: 100vh;
@@ -231,9 +230,10 @@ body._lock {
 		width: 100%;
 		margin-bottom: 20px;
 	}
-	&__custom-check {
+	&__custom-check,
+	&__custom-radio {
 		display: block;
-		position: relative;
+		// position: relative;
 		color: #C8D2DC;
 		width: 100%;
 		@include flex-ai-center;
@@ -246,12 +246,16 @@ body._lock {
 			border-radius: 7px;
 			flex-shrink: 0;
 			margin: 0 10px 0 0;
+			position: relative;
 		}
 	}
+	&__input-radio,
 	&__input-checkbox {
 		pointer-events: none;
 		opacity: 0;
 		visibility: hidden;
+	}
+	&__input-checkbox {
 		&:checked + label::before {
 			content: url('@img/icons/check.svg');
 			border-color: #86A8FF;
@@ -338,6 +342,29 @@ body._lock {
 				-webkit-text-fill-color: #000;
 			}
 		}
+	}
+
+	&__radio-wrap {
+		display: flex;
+		gap: 16px;
+		margin: 0 0 29px;
+	}
+	&__custom-radio {
+		color: #FCFFFF;
+		font-weight: 600;
+		&::before {
+			width: 20px;
+			height: 20px;
+			outline: 1px solid #525960;
+			border: 5px solid transparent;
+			background: #212426;
+			border-radius: 100%;
+		}
+	}
+	&__input-radio:checked + label::before {
+		outline: 1px solid #86A8FF;
+		border-color: #212426;
+		background: $gradientLight;
 	}
 }
 
