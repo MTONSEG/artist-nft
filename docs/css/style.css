@@ -367,6 +367,9 @@ body._lock {
 .no-webp .wrapper_pricing{
   background: url("../img/blur-b_arts.png") 0 20px no-repeat, url("../img/blur-b_auction.png") 100% 20px no-repeat, url("../img/cristal-bg-pricing.png") 0 223px no-repeat, url("../img/cristal-bg-pricing-2.png") 77% 102px no-repeat, url("../img/cristal-bg-pricing-3.png") 100% 216px no-repeat; }
 
+.no-webp .wrapper_school{
+  background: url("../img/cristal-bg-pricing.png") 0 47.3% no-repeat, url("../img/cristal-bg-pricing-2.png") 77.4% 40.7% no-repeat, url("../img/cristal-bg-pricing-3.png") 100% 46.2% no-repeat, url("../img/blur-b_pricing-component.png") 0 center no-repeat; }
+
 .container {
   margin: 0 auto;
   max-width: 1140px;
@@ -742,6 +745,50 @@ body._lock {
   -webkit-transform: scale(1.1);
       -ms-transform: scale(1.1);
           transform: scale(1.1);
+}
+
+.form__plan-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 10px;
+}
+
+.form__plan-item {
+  width: 100%;
+  max-width: 120px;
+  padding: 18px 10px 19px;
+  background: #212426;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+  text-align: center;
+  border-radius: 9px;
+  margin: 0 0 40px 0;
+}
+
+.form__plan-item span {
+  background: -o-linear-gradient(355.22deg, #68C9FF 9.27%, #D1B5FF 84.06%);
+  background: linear-gradient(94.78deg, #68C9FF 9.27%, #D1B5FF 84.06%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.form__plan-item._active {
+  background: -o-linear-gradient(355.22deg, #68C9FF 9.27%, #D1B5FF 84.06%);
+  background: linear-gradient(94.78deg, #68C9FF 9.27%, #D1B5FF 84.06%);
+  color: #000000;
+}
+
+.form__plan-item._active span {
+  -webkit-text-fill-color: #000;
 }
 
 .red {
@@ -1361,9 +1408,24 @@ body._lock {
 }
 
 .contact__title {
-  margin: 0 auto;
-  margin-bottom: 37px;
+  margin: 0 auto 7px;
   max-width: 540px;
+}
+
+.contact__token {
+  font-size: 16px;
+  line-height: 28px;
+  color: #1D1F21;
+  border-radius: 12px;
+  background: -o-linear-gradient(355.22deg, #68C9FF 9.27%, #D1B5FF 84.06%);
+  background: linear-gradient(94.78deg, #68C9FF 9.27%, #D1B5FF 84.06%);
+  padding: 5px 22px;
+  max-width: 191px;
+  margin: 0 auto 20px;
+}
+
+.contact__token span {
+  font-weight: 800;
 }
 
 .no-webp .inspire{
@@ -3357,6 +3419,57 @@ body._lock {
           box-shadow: none;
 }
 
+.school-hero {
+  margin-bottom: 46px;
+}
+
+.school-hero .arts-hero__row {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0 8px 0 2px;
+}
+
+.school-hero .arts-hero__body {
+  margin: 17px 20px 0 0;
+  max-width: 407px;
+}
+
+.school-hero .arts-hero__title {
+  margin-bottom: 17px;
+}
+
+.school-hero .arts-hero__image-wrap {
+  max-width: 667px;
+}
+
+.school-hero .arts-hero__image {
+  aspect-ratio: 667/617;
+}
+
+.school-pricing {
+  padding: 10px 0 66px;
+}
+
+.school-pricing .pricing__head {
+  margin-bottom: 93px;
+}
+
+.school-pricing .pricing__item-image {
+  aspect-ratio: 227/233;
+  width: 227px;
+  height: auto;
+}
+
+.school-pricing .pricing__item-image_image1 {
+  aspect-ratio: 227/243;
+}
+
+.school-pricing .pricing__bubble {
+  right: 16.9%;
+  bottom: -35px;
+}
+
 .footer {
   background: #212426;
 }
@@ -3964,6 +4077,9 @@ body._lock {
 }
 
 @media (max-width: 767px) {
+  .no-webp .wrapper_school{
+    background: url("../img/cristal-bg-pricing_sch-m.png") 100% 44.9% no-repeat, url("../img/blur-b_pricing-component_m.png") 0 50px no-repeat; }
+
   .container_article {
     padding: 0 15px;
   }
@@ -4004,6 +4120,17 @@ body._lock {
 
   .form__btn {
     margin-bottom: 17px;
+  }
+
+  .form__plan-list {
+    gap: 9px;
+  }
+
+  .form__plan-item {
+    padding: 11px 5px 12px;
+    max-width: 100%;
+    font-size: 18px;
+    line-height: 26px;
   }
 
   .hero {
@@ -4221,6 +4348,13 @@ body._lock {
     padding: 37px 0 0;
   }
 
+  .no-webp .contact_school{
+    background: url("../img/contact-cristal-min.png") 0 -17px no-repeat, url("../img/contact-cristal.png") 100% -7px no-repeat; }
+
+  .contact_school {
+    padding: 107px 0 0;
+  }
+
   .contact__subtitle,
   .contact__title {
     text-align: left;
@@ -4229,6 +4363,15 @@ body._lock {
   .contact__title {
     max-width: 306px;
     margin: 0 0 15px 0;
+  }
+
+  .contact__title._mb {
+    margin: 0 0 8px 0;
+  }
+
+  .contact__token {
+    margin: 0 0 20px;
+    padding: 5px 21px 5px 24px;
   }
 
   .inspire {
@@ -4905,6 +5048,114 @@ body._lock {
     top: 22%;
   }
 
+  .school-hero {
+    padding: 115px 0 40px;
+    margin-bottom: 63px;
+  }
+
+  .school-hero .container {
+    padding: 0;
+  }
+
+  .school-hero .arts-hero__row {
+    padding: 0;
+    gap: 28px;
+  }
+
+  .school-hero .arts-hero__body {
+    max-width: 100%;
+    padding: 0 15px;
+  }
+
+  .school-hero .arts-hero__title {
+    margin-bottom: 7px;
+    max-width: 100%;
+  }
+
+  .school-hero .arts-hero__text {
+    margin-bottom: 25px;
+  }
+
+  .school-hero .arts-hero__image-wrap {
+    max-width: 375px;
+  }
+
+  .school-hero .arts-hero__image {
+    aspect-ratio: 375/340;
+  }
+
+  .school-hero .arts-hero__star_1 {
+    bottom: 46.7%;
+    left: calc(100% - 41px);
+    -webkit-transform: rotate(-20deg);
+        -ms-transform: rotate(-20deg);
+            transform: rotate(-20deg);
+  }
+
+  .school-hero .arts-hero__star_2 {
+    right: calc(100% - 47px);
+    top: 74.8%;
+    width: 46px;
+    height: 62px;
+    -webkit-transform: rotate(14deg);
+        -ms-transform: rotate(14deg);
+            transform: rotate(14deg);
+  }
+
+  .school-hero .text-bg_1 {
+    display: block;
+    top: 70px;
+    left: -147px;
+  }
+
+  .school-hero .text-bg_2 {
+    top: calc(100% - 31px);
+    left: 6.9%;
+  }
+
+  .school-benefits .main-benefits__list {
+    margin-bottom: 114px;
+  }
+
+  .school-pricing {
+    padding: 10px 0 0;
+  }
+
+  .school-pricing .pricing__head {
+    margin-bottom: 87px;
+  }
+
+  .school-pricing .pricing__title {
+    margin: 0 auto 4px;
+  }
+
+  .school-pricing .pricing__tabs {
+    margin: 0 auto 21px;
+  }
+
+  .school-pricing .pricing__bg-text-1 {
+    left: -32px;
+    top: 101px;
+  }
+
+  .school-pricing .pricing__bg-text-2 {
+    right: -14px;
+    top: -68px;
+  }
+
+  .school-pricing .pricing__star {
+    left: 5px;
+    top: -74px;
+  }
+
+  .school-pricing .pricing__bubble {
+    display: none;
+  }
+
+  .school-pricing .text-bg {
+    display: block;
+  }
+
   .footer {
     padding: 21px 0 25px;
   }
@@ -5042,6 +5293,26 @@ body._lock {
   .gallery__item_big {
     max-width: 345px;
   }
+
+  .school-hero {
+    padding: 115px 0 40px;
+  }
+
+  .school-hero .arts-hero__body {
+    max-width: 273px;
+  }
+
+  .school-pricing .pricing__head {
+    margin-bottom: 87px;
+  }
+
+  .school-pricing .pricing__title {
+    margin: 0 0 4px;
+  }
+
+  .school-pricing .pricing__tabs {
+    margin: 0 auto 21px;
+  }
 }
 
 @media (max-width: 375px) {
@@ -5158,6 +5429,8 @@ body._lock {
 
 .webp .wrapper_pricing{ background: url(../img/blur-b_arts.webp) 0 20px no-repeat, url(../img/blur-b_auction.webp) 100% 20px no-repeat, url(../img/cristal-bg-pricing.webp) 0 223px no-repeat, url(../img/cristal-bg-pricing-2.webp) 77% 102px no-repeat, url(../img/cristal-bg-pricing-3.webp) 100% 216px no-repeat; }
 
+.webp .wrapper_school{ background: url(../img/cristal-bg-pricing.webp) 0 47.3% no-repeat, url(../img/cristal-bg-pricing-2.webp) 77.4% 40.7% no-repeat, url(../img/cristal-bg-pricing-3.webp) 100% 46.2% no-repeat, url(../img/blur-b_pricing-component.webp) 0 center no-repeat; }
+
 .webp .banner__body{ background: url(../img/home_banner-bg.webp) 100% center no-repeat, -o-linear-gradient(355.22deg, #6880FF 9.27%, #3CA7F4 50.77%, #8C45FF 84.06%); }
 
 .webp .banner__body{ background: url(../img/home_banner-bg.webp) 100% center no-repeat, linear-gradient(94.78deg, #6880FF 9.27%, #3CA7F4 50.77%, #8C45FF 84.06%); }
@@ -5183,7 +5456,17 @@ body._lock {
 
 @media (max-width: 767px){
 
+  .webp .wrapper_school{ background: url(../img/cristal-bg-pricing_sch-m.webp) 100% 44.9% no-repeat, url(../img/blur-b_pricing-component_m.webp) 0 50px no-repeat; }
+}
+
+@media (max-width: 767px){
+
   .webp .contact{ background: url(../img/contact-bg_img-1_m.webp) calc(100% - 50px) 18px no-repeat, url(../img/contact-bg_img-2_m.webp) 100% 1px no-repeat; }
+}
+
+@media (max-width: 767px){
+
+  .webp .contact_school{ background: url(../img/contact-cristal-min.webp) 0 -17px no-repeat, url(../img/contact-cristal.webp) 100% -7px no-repeat; }
 }
 
 @media (max-width: 767px){

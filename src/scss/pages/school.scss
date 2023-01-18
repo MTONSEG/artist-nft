@@ -1,0 +1,165 @@
+.school-hero {
+	margin-bottom: 46px;
+	& .arts-hero {
+		&__row {
+			justify-content: space-between;
+			padding: 0 8px 0 2px;
+		}
+		&__body {    
+			margin: 17px 20px 0 0;
+			max-width: 407px;
+		}
+		&__title {
+			margin-bottom: 17px;
+		}
+		&__image-wrap {
+			max-width: 667px;
+		}
+		&__image {
+			aspect-ratio: 667/617;
+		}
+	}
+}
+
+.school-pricing {
+	padding: 10px 0 66px;
+	& .pricing {
+		&__head {
+			margin-bottom: 93px;
+		}
+		&__item-image {
+			aspect-ratio: 227/233;
+			width: 227px;
+			height: auto;
+			&_image1 {
+				aspect-ratio: 227/243;
+			}
+		}
+		&__bubble {
+			right: 16.9%;
+			bottom: -35px;
+		}
+	}
+}
+
+@media ($width767) {
+	.school-hero {
+		padding: 115px 0 40px;
+		margin-bottom: 63px;
+		& .container {
+			padding: 0;
+		}
+		& .arts-hero {
+			&__row {
+				padding: 0;
+				gap: 28px;
+			}
+			&__body {
+				max-width: 100%;
+				padding: 0 15px;
+			}
+			&__title {
+				margin-bottom: 7px;
+				max-width: 100%;
+			}
+			&__text {
+				margin-bottom: 25px;
+			}
+			&__image-wrap {
+				max-width: 375px;
+			}
+			&__image {
+				aspect-ratio: 375/340;
+			}
+			&__star_1 {
+				bottom: 46.7%;
+				left: calc(100% - 41px);
+				transform: rotate(-20deg);
+			}
+			&__star_2 {
+				right: calc(100% - 47px);
+				top: 74.8%;
+				width: 46px;
+				height: 62px;
+				transform: rotate(14deg);
+			}
+		}
+		& .text-bg_1 {
+			display: block;
+			top: 70px;
+			left: -147px;
+		}
+		& .text-bg_2 {
+			top: calc(100% - 31px);
+			left: 6.9%;
+		}
+	}
+
+	.school-benefits {
+		& .main-benefits {
+			&__list {
+				margin-bottom: 114px;
+			}
+		}
+	}
+
+	.school-pricing {
+		padding: 10px 0 0;
+		& .pricing {
+			&__head {
+				margin-bottom: 87px;
+			}
+			
+			&__title {
+				margin: 0 auto 4px;
+			}
+
+			&__tabs {
+				margin: 0 auto 21px;
+			}
+			&__bg-text-1 {
+				left: -32px;
+				top: 101px;
+			}
+			&__bg-text-2 {
+				right: -14px;
+				top: -68px;
+			}
+			&__star {
+				left: 5px;
+				top: -74px;
+			}
+			&__bubble {
+				display: none;
+			}
+		}
+		& .text-bg {
+			display: block;
+		}
+	}
+}
+
+@media ($width575) {
+	.school-hero {
+		padding: 115px 0 40px;
+		& .arts-hero {
+			&__body {
+				max-width: 273px;
+			}
+		}
+	}
+
+	.school-pricing {
+		& .pricing {
+			&__head {
+				margin-bottom: 87px;
+			}
+			&__title {
+				margin: 0 0 4px;
+			}
+			&__tabs {
+				margin: 0 auto 21px;
+			}
+		}
+	}
+}

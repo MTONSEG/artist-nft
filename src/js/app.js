@@ -1,4 +1,4 @@
-import { isWebp, removeClass, addClass, toggleClass } from "./modules/functions.js";
+import { isWebp, removeClass, addClass} from "./modules/functions.js";
 import * as dynamicAdaptive from './modules/dynamicAdapt.js';
 import * as select from './modules/select.js';
 import * as burger from './modules/menu.js';
@@ -73,43 +73,48 @@ if (listColors) {
 }
 
 //payment form
-const tabBtns = Array.from(document.querySelectorAll('.tab'));
 
-if (tabBtns) {
-	const tabContents = Array.from(document.querySelectorAll('.tab-content'));
-	const tabIndicator = document.querySelector('.tab-indicator')
+const allTabs = document.querySelectorAll('.tabs');
 
-	
-	let amountTabs = tabBtns.length;
+if (allTabs) {
+	for (let tabs of allTabs) {
+		const tabBtns = Array.from(tabs.querySelectorAll('.tab'));
+		const tabContents = Array.from(tabs.querySelectorAll('.tab-content'));
+		const tabIndicator = tabs.querySelector('.tab-indicator');
 
-	for (let btn of tabBtns) {
-		btn.addEventListener('click', e => {
-			let currentBtn = e.target.closest('.tab');
-			let tabId = currentBtn.getAttribute('data-tab');
-			let currentContent = document.querySelector(tabId);
+		let amountTabs = tabBtns.length;
 
-			for (let btn of tabBtns) {
-				removeClass(btn, '_active');
-			}
+		for (let btn of tabBtns) {
+			btn.addEventListener('click', e => {
+				let currentBtn = e.target.closest('.tab');
+				let tabId = currentBtn.getAttribute('data-tab');
+				let currentContent = document.querySelector(tabId);
 
-			for (let content of tabContents) {
-				removeClass(content, '_active');
-			}
+				for (let btn of tabBtns) {
+					removeClass(btn, '_active');
+				}
 
-			addClass(currentBtn, '_active');
-			addClass(currentContent, '_active');
-			changeIndicator(currentBtn);
+				addClass(currentBtn, '_active');
 
-			e.preventDefault()
-		})
-	}
+				if (currentContent) {
+					for (let content of tabContents) {
+						removeClass(content, '_active');
+					}
 
+					addClass(currentContent, '_active');
+					changeIndicator(currentBtn);
+				}
+				e.preventDefault()
+			})
+		}
 
-	function changeIndicator(btn) {
-		let indexBtn = tabBtns.indexOf(btn);
-		tabIndicator.style.left = `calc(${indexBtn} * 100% / ${amountTabs})`
+		function changeIndicator(btn) {
+			let indexBtn = tabBtns.indexOf(btn);
+			tabIndicator.style.left = `calc(${indexBtn} * 100% / ${amountTabs})`
+		}
 	}
 }
+
 
 // wallet copy
 const copyWallet = document.querySelector('.form__copy-icon');

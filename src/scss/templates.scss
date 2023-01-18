@@ -35,6 +35,13 @@ body._lock {
 			url("@img/cristal-bg-pricing-2.png") 77% 102px no-repeat,
 			url("@img/cristal-bg-pricing-3.png") 100% 216px no-repeat;
 	}
+	&_school {
+		background: 
+			url("@img/cristal-bg-pricing.png") 0 47.3% no-repeat,
+			url("@img/cristal-bg-pricing-2.png") 77.4% 40.7% no-repeat,
+			url("@img/cristal-bg-pricing-3.png") 100% 46.2% no-repeat,
+			url("@img/blur-b_pricing-component.png") 0 center no-repeat,;
+	}
 }
 
 .container {
@@ -305,6 +312,33 @@ body._lock {
 			transform: scale(1.1);
 		}
 	}
+
+	&__plan-list {
+		@include flex-center-between;
+		gap: 10px;
+	}
+	&__plan-item {
+		width: 100%;
+		max-width: 120px;
+		padding: 18px 10px 19px;
+		background: #212426;
+		font-weight: 700;
+		font-size: 18px;
+		line-height: 26px;
+		text-align: center;
+		border-radius: 9px;
+		margin: 0 0 40px 0;
+		span {
+			@include gradientFont;
+		}
+		&._active {
+			background: $gradientLight;
+			color: #000000;
+			span {
+				-webkit-text-fill-color: #000;
+			}
+		}
+	}
 }
 
 .red{background: #CA3838;}
@@ -372,6 +406,13 @@ body._lock {
 }
 
 @media ($width767) {
+	.wrapper {
+		&_school {
+			background: 
+				url("@img/cristal-bg-pricing_sch-m.png") 100% 44.9% no-repeat,
+				url("@img/blur-b_pricing-component_m.png") 0 50px no-repeat;
+		}
+	}
 	.container {
 		&_article {
 			padding: 0 15px;
@@ -413,6 +454,15 @@ body._lock {
 		&__btn {
 			margin-bottom: 17px;
 		}
+		&__plan-list {
+			gap: 9px;
+		}
+		&__plan-item {
+			padding: 11px 5px 12px;
+			max-width: 100%;
+			font-size: 18px;
+			line-height: 26px;
+		}
 	}
 }
 
@@ -433,6 +483,7 @@ body._lock {
 		&_auction {
 			background-image: none!important;
 		}
+		
 	}
 	.container {
 		&_home {

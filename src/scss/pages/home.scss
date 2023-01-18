@@ -262,9 +262,21 @@
 		text-align: center;
 	}
 	&__title {
-		margin: 0 auto;
-		margin-bottom: 37px;
+		margin: 0 auto 7px;
 		max-width: 540px;
+	}
+	&__token {
+		font-size: 16px;
+		line-height: 28px;
+		color: $bg-color;
+		border-radius: 12px;
+		background: $gradientLight;
+		padding: 5px 22px;
+		max-width: 191px;
+		margin: 0 auto 20px;
+		span {
+			font-weight: 800;
+		}
 	}
 }
 
@@ -483,6 +495,12 @@
 		background: 
 			url("@img/contact-bg_img-1_m.png") calc(100% - 50px) 18px no-repeat,
 			url("@img/contact-bg_img-2_m.png")  100% 1px no-repeat;
+		&_school {
+			background: 
+				url("@img/contact-cristal-min.png") 0 -17px no-repeat,
+				url("@img/contact-cristal.png")  100% -7px no-repeat;
+			padding: 107px 0 0;
+		}
 		&__subtitle,
 		&__title {
 			text-align: left;
@@ -490,6 +508,13 @@
 		&__title {
 			max-width: 306px;
 			margin: 0 0 15px 0;
+			&._mb {
+				margin: 0 0 8px 0;
+			}
+		}
+		&__token {
+			margin: 0 0 20px;
+			padding: 5px 21px 5px 24px;
 		}
 	}
 }
