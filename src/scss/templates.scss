@@ -41,6 +41,9 @@ body._lock {
 			url("@img/cristal-bg-pricing-3.png") 100% 46.2% no-repeat,
 			url("@img/blur-b_pricing-component.png") 0 center no-repeat,;
 	}
+	&__body {
+		flex: 1 1 auto;
+	}
 }
 
 .container {

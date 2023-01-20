@@ -1,4 +1,4 @@
-import { isWebp, removeClass, addClass} from "./modules/functions.js";
+import { isWebp, removeClass, addClass, toggleClass} from "./modules/functions.js";
 import * as dynamicAdaptive from './modules/dynamicAdapt.js';
 import * as select from './modules/select.js';
 import * as burger from './modules/menu.js';
@@ -34,7 +34,12 @@ const forumSlider = new Swiper('.forum-body__slider', {
 			spaceBetween: 30,
 		}
 	}
-})
+});
+
+const chatSlider = new Swiper('.chat-list__slider', {
+	slidesPerView: 'auto',
+	spaceBetween: 10,
+});
 
 
 //Show info in Item Gallery
@@ -150,3 +155,18 @@ if (unlockBtn) {
 		e.preventDefault();
 	})
 }
+
+//Admin Header Menu
+
+const headerMenuBtn = document.querySelector('.header-btn');
+
+if (headerMenuBtn) {
+	const headerMenu = document.querySelector('.user-menu__list');
+	headerMenuBtn.addEventListener('click', e => {
+		toggleClass(headerMenu, '_active');
+		toggleClass(document.body, '_lock');
+	})
+}
+
+//Messanger
+
