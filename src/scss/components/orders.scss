@@ -39,7 +39,6 @@
 
 .item-order {
 	display: grid;
-	// grid-template-columns: 360px 128px 1fr 147px;
 	grid-template-columns: minmax(342px, 2fr) minmax(100px, 1fr) minmax(350px, 2fr) minmax(80px, 147px);
 	align-items: center;
 	justify-content: space-between;

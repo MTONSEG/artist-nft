@@ -26,7 +26,7 @@
 		<main class="content-user apanel">
 			<nav class="content-user__menu user-menu">
 				<div class="user-menu__list">
-					<a data-link="#mess" href="#" class="user-menu__link _active">
+					<a data-link="#mess" href="#" class="user-menu__link">
 						<span class="i-mess"></span>
 						<p>Messages</p>
 					</a>
@@ -34,7 +34,7 @@
 						<span class="i-bag"></span>
 						<p>Orders</p>
 					</a>
-					<a data-link="#nft" href="#" class="user-menu__link">
+					<a data-link="#nft" href="#" class="user-menu__link   _active">
 						<span class="i-orders"></span>
 						<p>NFT Orders</p>
 					</a>
@@ -55,7 +55,7 @@
 				</div>
 			</nav>
 
-			<div id="mess" class="content-user__body content-user__body_chat _active">
+			<div id="mess" class="content-user__body content-user__body_chat">
 				<div class="chat__list chat-list">
 					<div class="chat-list__body">
 						<h1 class="chat-list__title">
@@ -140,7 +140,7 @@
 									</p>
 								</div>
 							</li>
-							<li class="chat-list__dialog item-dialog">
+							<li class="chat-list__dialog item-dialog ">
 								<div class="item-dialog__image-wrap">
 									<img loading="lazy" src="@img/item-dialog_photo.jpg" alt="Photo" class="item-dialog__image">
 									<div class="item-dialog__status  status _online"></div>
@@ -263,7 +263,7 @@
 					@@include('./html/orders.html',{})
 				</div>
 			</div>
-			<div id="nft" class="content-user__body content-user__body_table">
+			<div id="nft" class="content-user__body content-user__body_table  _active">
 				<div class="table-body">
 					@@include('./html/NFTorders.html',{})
 				</div>
