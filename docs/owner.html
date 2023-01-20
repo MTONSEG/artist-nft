@@ -33,14 +33,14 @@
 			</div>
 		</header>
 
-		<main class="content-user">
+		<main class="content-user apanel">
 			<nav class="content-user__menu user-menu">
 				<div class="user-menu__list">
-					<a data-link="#mess" href="#" class="user-menu__link">
+					<a data-link="#mess" href="#" class="user-menu__link _active">
 						<span class="i-mess"></span>
 						<p>Messages</p>
 					</a>
-					<a data-link="#orders" href="#" class="user-menu__link _active">
+					<a data-link="#orders" href="#" class="user-menu__link">
 						<span class="i-bag"></span>
 						<p>Orders</p>
 					</a>
@@ -65,7 +65,7 @@
 				</div>
 			</nav>
 
-			<div id="mess" class="content-user__body content-user__body_chat">
+			<div id="mess" class="content-user__body content-user__body_chat _active">
 				<div class="chat__list chat-list">
 					<div class="chat-list__body">
 						<h1 class="chat-list__title">
@@ -76,7 +76,8 @@
 							<div class="swiper-wrapper">
 								<div class="chat-list__slide swiper-slide">
 									<div class="chat-list__slide-image-wrap">
-										<img loading="lazy" src="img/chat-slide_img1.jpg" alt="Image" class="chat-list__slide-image">
+										<img loading="lazy" src="img/chat-slide_img1.jpg" alt="Image"
+											class="chat-list__slide-image">
 										<div class="item-dialog__status  status _online"></div>
 									</div>
 									<p class="chat-list__slide-name">Ivan Ivanov</p>
@@ -84,7 +85,8 @@
 								</div>
 								<div class="chat-list__slide swiper-slide">
 									<div class="chat-list__slide-image-wrap">
-										<img loading="lazy" src="img/chat-slide_img2.jpg" alt="Image" class="chat-list__slide-image">
+										<img loading="lazy" src="img/chat-slide_img2.jpg" alt="Image"
+											class="chat-list__slide-image">
 										<div class="item-dialog__status  status _online"></div>
 									</div>
 									<p class="chat-list__slide-name">Ivan Ivanov</p>
@@ -92,7 +94,8 @@
 								</div>
 								<div class="chat-list__slide swiper-slide">
 									<div class="chat-list__slide-image-wrap">
-										<img loading="lazy" src="img/chat-slide_img3.jpg" alt="Image" class="chat-list__slide-image">
+										<img loading="lazy" src="img/chat-slide_img3.jpg" alt="Image"
+											class="chat-list__slide-image">
 										<div class="item-dialog__status  status _online"></div>
 									</div>
 									<p class="chat-list__slide-name">Ivan Ivanov</p>
@@ -100,7 +103,8 @@
 								</div>
 								<div class="chat-list__slide swiper-slide">
 									<div class="chat-list__slide-image-wrap">
-										<img loading="lazy" src="img/chat-slide_img4.jpg" alt="Image" class="chat-list__slide-image">
+										<img loading="lazy" src="img/chat-slide_img4.jpg" alt="Image"
+											class="chat-list__slide-image">
 										<div class="item-dialog__status  status _online"></div>
 									</div>
 									<p class="chat-list__slide-name">Ivan Ivanov</p>
@@ -110,7 +114,8 @@
 						</div>
 
 						<div class="chat-list__form">
-							<input type="text" name="Search" class="chat-list__input" aria-label="Search form" placeholder="Search">
+							<input type="text" name="Search" class="chat-list__input" aria-label="Search form"
+								placeholder="Search">
 							<img src="img/icons/search.svg" alt="icon" class="chat-list__search-icon">
 						</div>
 
@@ -244,7 +249,8 @@
 
 						<div class="main-dialog__message _outgoing">
 							<p class="main-dialog__text">
-								Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+								labore et dolore magna aliqua. Ut enim ad minim veniam
 							</p>
 							<p class="main-dialog__time">10 min ago</p>
 						</div>
@@ -262,9 +268,260 @@
 					</div>
 				</div>
 			</div>
+			<div id="orders" class="content-user__body content-user__body_table">
+				<div class="table-body">
+					<div class="orders">
 
-			<div id="orders" class="content-user__body _active">
-				
+	<h1 class="orders__title">My orders</h1>
+	<div class="orders__header">
+		<div class="item-order__header">
+			<p class="item-order__header-title block-title">Type of item</p>
+			<p class="item-order__header-color block-title">Color</p>
+			<p class="item-order__header-mail block-title">E-mail</p>
+		</div>
+		<div class="item-order__size block-title">
+			Size
+		</div>
+		<div class="item-order__info">
+			<div class="item-order__info-block block-title">
+				Comment
+			</div>
+			<div class="item-order__info-block block-title">
+				Delivery address
+			</div>
+		</div>
+		<div class="item-order__button-wrap block-title">
+			Action
+		</div>
+	</div>
+	<ul class="orders__list">
+		<li class="orders__item item-order table-item">
+			<div class="item-order__header">
+				<h2 class="item-order__header-title">T-SHIRT</h2>
+				<div class="item-order__header-color">
+					<div class="item-order__color orange"></div>
+				</div>
+				<div class="item-order__header-mail">emailofcustomer@gmail.com</div>
+			</div>
+			<div class="item-order__size">
+				XL (99-99-99)
+			</div>
+			<div class="item-order__info">
+				<div class="item-order__info-block">
+					<p class="info-title">Comment</p>
+					<p class="info-text">Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet</p>
+					<a href="#" class="more-link">Show more</a>
+				</div>
+				<div class="item-order__info-block">
+					<p class="info-title">Delivery address</p>
+					<p class="info-text">Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet</p>
+					<a href="#" class="more-link">Show more</a>
+				</div>
+			</div>
+			<div class="item-order__button-wrap">
+				<a href="" class="item-order__btn btn">Message</a>
+			</div>
+		</li>
+		<li class="orders__item item-order table-item">
+			<div class="item-order__header">
+				<h2 class="item-order__header-title">T-SHIRT</h2>
+				<div class="item-order__header-color">
+					<div class="item-order__color orange"></div>
+				</div>
+				<div class="item-order__header-mail">emailofcustomer@gmail.com</div>
+			</div>
+			<div class="item-order__size">
+				XL (99-99-99)
+			</div>
+			<div class="item-order__info">
+				<div class="item-order__info-block">
+					<p class="info-title">Comment</p>
+					<p class="info-text">Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet</p>
+					<a href="#" class="more-link">Show more</a>
+				</div>
+				<div class="item-order__info-block">
+					<p class="info-title">Delivery address</p>
+					<p class="info-text">Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet</p>
+					<a href="#" class="more-link">Show more</a>
+				</div>
+			</div>
+			<div class="item-order__button-wrap">
+				<a href="" class="item-order__btn btn">Message</a>
+			</div>
+		</li>
+		<li class="orders__item item-order table-item">
+			<div class="item-order__header">
+				<h2 class="item-order__header-title">T-SHIRT</h2>
+				<div class="item-order__header-color">
+					<div class="item-order__color orange"></div>
+				</div>
+				<div class="item-order__header-mail">emailofcustomer@gmail.com</div>
+			</div>
+			<div class="item-order__size">
+				XL (99-99-99)
+			</div>
+			<div class="item-order__info">
+				<div class="item-order__info-block">
+					<p class="info-title">Comment</p>
+					<p class="info-text">Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet</p>
+					<a href="#" class="more-link">Show more</a>
+				</div>
+				<div class="item-order__info-block">
+					<p class="info-title">Delivery address</p>
+					<p class="info-text">Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet</p>
+					<a href="#" class="more-link">Show more</a>
+				</div>
+			</div>
+			<div class="item-order__button-wrap">
+				<a href="" class="item-order__btn btn">Message</a>
+			</div>
+		</li>
+		<li class="orders__item item-order table-item">
+			<div class="item-order__header">
+				<h2 class="item-order__header-title">T-SHIRT</h2>
+				<div class="item-order__header-color">
+					<div class="item-order__color orange"></div>
+				</div>
+				<div class="item-order__header-mail">emailofcustomer@gmail.com</div>
+			</div>
+			<div class="item-order__size">
+				XL (99-99-99)
+			</div>
+			<div class="item-order__info">
+				<div class="item-order__info-block">
+					<p class="info-title">Comment</p>
+					<p class="info-text">Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet</p>
+					<a href="#" class="more-link">Show more</a>
+				</div>
+				<div class="item-order__info-block">
+					<p class="info-title">Delivery address</p>
+					<p class="info-text">Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet</p>
+					<a href="#" class="more-link">Show more</a>
+				</div>
+			</div>
+			<div class="item-order__button-wrap">
+				<a href="" class="item-order__btn btn">Message</a>
+			</div>
+		</li>
+		<li class="orders__item item-order table-item">
+			<div class="item-order__header">
+				<h2 class="item-order__header-title">T-SHIRT</h2>
+				<div class="item-order__header-color">
+					<div class="item-order__color orange"></div>
+				</div>
+				<div class="item-order__header-mail">emailofcustomer@gmail.com</div>
+			</div>
+			<div class="item-order__size">
+				XL (99-99-99)
+			</div>
+			<div class="item-order__info">
+				<div class="item-order__info-block">
+					<p class="info-title">Comment</p>
+					<p class="info-text">Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet</p>
+					<a href="#" class="more-link">Show more</a>
+				</div>
+				<div class="item-order__info-block">
+					<p class="info-title">Delivery address</p>
+					<p class="info-text">Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet</p>
+					<a href="#" class="more-link">Show more</a>
+				</div>
+			</div>
+			<div class="item-order__button-wrap">
+				<a href="" class="item-order__btn btn">Message</a>
+			</div>
+		</li>
+		<li class="orders__item item-order table-item">
+			<div class="item-order__header">
+				<h2 class="item-order__header-title">T-SHIRT</h2>
+				<div class="item-order__header-color">
+					<div class="item-order__color orange"></div>
+				</div>
+				<div class="item-order__header-mail">emailofcustomer@gmail.com</div>
+			</div>
+			<div class="item-order__size">
+				XL (99-99-99)
+			</div>
+			<div class="item-order__info">
+				<div class="item-order__info-block">
+					<p class="info-title">Comment</p>
+					<p class="info-text">Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet</p>
+					<a href="#" class="more-link">Show more</a>
+				</div>
+				<div class="item-order__info-block">
+					<p class="info-title">Delivery address</p>
+					<p class="info-text">Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet</p>
+					<a href="#" class="more-link">Show more</a>
+				</div>
+			</div>
+			<div class="item-order__button-wrap">
+				<a href="" class="item-order__btn btn">Message</a>
+			</div>
+		</li>
+		<li class="orders__item item-order table-item">
+			<div class="item-order__header">
+				<h2 class="item-order__header-title">T-SHIRT</h2>
+				<div class="item-order__header-color">
+					<div class="item-order__color orange"></div>
+				</div>
+				<div class="item-order__header-mail">emailofcustomer@gmail.com</div>
+			</div>
+			<div class="item-order__size">
+				XL (99-99-99)
+			</div>
+			<div class="item-order__info">
+				<div class="item-order__info-block">
+					<p class="info-title">Comment</p>
+					<p class="info-text">Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet</p>
+					<a href="#" class="more-link">Show more</a>
+				</div>
+				<div class="item-order__info-block">
+					<p class="info-title">Delivery address</p>
+					<p class="info-text">Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet</p>
+					<a href="#" class="more-link">Show more</a>
+				</div>
+			</div>
+			<div class="item-order__button-wrap">
+				<a href="" class="item-order__btn btn">Message</a>
+			</div>
+		</li>
+		<li class="orders__item item-order table-item">
+			<div class="item-order__header">
+				<h2 class="item-order__header-title">T-SHIRT</h2>
+				<div class="item-order__header-color">
+					<div class="item-order__color orange"></div>
+				</div>
+				<div class="item-order__header-mail">emailofcustomer@gmail.com</div>
+			</div>
+			<div class="item-order__size">
+				XL (99-99-99)
+			</div>
+			<div class="item-order__info">
+				<div class="item-order__info-block">
+					<p class="info-title">Comment</p>
+					<p class="info-text">Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet</p>
+					<a href="#" class="more-link">Show more</a>
+				</div>
+				<div class="item-order__info-block">
+					<p class="info-title">Delivery address</p>
+					<p class="info-text">Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet</p>
+					<a href="#" class="more-link">Show more</a>
+				</div>
+			</div>
+			<div class="item-order__button-wrap">
+				<a href="" class="item-order__btn btn">Message</a>
+			</div>
+		</li>
+	</ul>
+</div>
+				</div>
+			</div>
+			<div id="nft" class="content-user__body content-user__body_table">
+				<div class="table-body">
+					
+				</div>
+			</div>
+			<div id="workers" class="content-user__body content-user__body_table">
+				In developing
 			</div>
 		</main>
 	</div>

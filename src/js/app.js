@@ -159,9 +159,9 @@ if (unlockBtn) {
 //Admin Header Menu
 
 const headerMenuBtn = document.querySelector('.header-btn');
+const headerMenu = document.querySelector('.user-menu__list');
 
 if (headerMenuBtn) {
-	const headerMenu = document.querySelector('.user-menu__list');
 	headerMenuBtn.addEventListener('click', e => {
 		toggleClass(headerMenu, '_active');
 		toggleClass(document.body, '_lock');
@@ -169,4 +169,52 @@ if (headerMenuBtn) {
 }
 
 //Messanger
+
+const aPanel = document.querySelector('.apanel');
+
+if (aPanel) {
+	const allLinks = Array.from(aPanel.querySelectorAll('.user-menu__link'));
+	const allContent = Array.from(aPanel.querySelectorAll('.content-user__body'));
+
+	for (let link of allLinks) {
+		link.addEventListener('click', e => {
+			let currentLink = e.target.closest('.user-menu__link');
+			let linkId = currentLink.getAttribute('data-link');
+			let currentContent = aPanel.querySelector(linkId);
+
+			for (let item of allLinks) {
+				removeClass(item, '_active');
+			}
+
+			for (let item of allContent) {
+				removeClass(item, '_active');
+			}
+
+			addClass(currentLink, '_active');
+			addClass(currentContent, '_active');
+			removeClass(headerMenu, '_active');
+			removeClass(document.body, '_active')
+
+			e.preventDefault();
+		})
+	}
+}
+
+//Show Dialog
+const itemDialog = document.querySelector('.item-dialog');
+const dialog = document.querySelector('.dialog');
+
+if (itemDialog) {
+	let outLink = dialog.querySelector('.dialog__out-link');
+
+	console.log(outLink);
+
+	itemDialog.addEventListener('click', e => {
+		addClass(dialog, '_active');
+	})
+
+	outLink.addEventListener('click', e => {
+		removeClass(dialog, '_active');
+	})
+}
 
