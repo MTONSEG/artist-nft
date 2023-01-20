@@ -34,11 +34,11 @@
 						<span class="i-bag"></span>
 						<p>Orders</p>
 					</a>
-					<a data-link="#nft" href="#" class="user-menu__link   _active">
+					<a data-link="#nft" href="#" class="user-menu__link">
 						<span class="i-orders"></span>
 						<p>NFT Orders</p>
 					</a>
-					<a data-link="#workers" href="#" class="user-menu__link">
+					<a data-link="#workers" href="#" class="user-menu__link  _active">
 						<span class="i-workers"></span>
 						<p>Workers</p>
 					</a>
@@ -263,13 +263,15 @@
 					@@include('./html/orders.html',{})
 				</div>
 			</div>
-			<div id="nft" class="content-user__body content-user__body_table  _active">
+			<div id="nft" class="content-user__body content-user__body_table">
 				<div class="table-body">
 					@@include('./html/NFTorders.html',{})
 				</div>
 			</div>
-			<div id="workers" class="content-user__body content-user__body_table">
-				In developing
+			<div id="workers" class="content-user__body content-user__body_table  _active">
+				<div class="table-body">
+					@@include('./html/workers.html',{})
+				</div>
 			</div>
 		</main>
 	</div>

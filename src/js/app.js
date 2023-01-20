@@ -193,7 +193,7 @@ if (aPanel) {
 			addClass(currentLink, '_active');
 			addClass(currentContent, '_active');
 			removeClass(headerMenu, '_active');
-			removeClass(document.body, '_active')
+			removeClass(document.body, '_lock');
 
 			e.preventDefault();
 		})
