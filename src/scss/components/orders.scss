@@ -27,6 +27,9 @@
 		font-size: 20px;
 		line-height: 30px;
 		margin: 0 0 10px;
+		&._stat {
+			margin: 0 0 8px;
+		}
 	}
 	&__header {
 		display: grid;
@@ -249,5 +252,6 @@
 @media ($width767) {
 	.table-body {
 		padding: 83px 15px 40px;
+		background: $bg-color;
 	}
 }

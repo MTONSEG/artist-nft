@@ -26,7 +26,7 @@
 		<main class="content-user apanel">
 			<nav class="content-user__menu user-menu">
 				<div class="user-menu__list">
-					<a data-link="#mess" href="#" class="user-menu__link">
+					<a data-link="#mess" href="#" class="user-menu__link _active">
 						<span class="i-mess"></span>
 						<p>Messages</p>
 					</a>
@@ -38,7 +38,7 @@
 						<span class="i-orders"></span>
 						<p>NFT Orders</p>
 					</a>
-					<a data-link="#workers" href="#" class="user-menu__link  _active">
+					<a data-link="#workers" href="#" class="user-menu__link">
 						<span class="i-workers"></span>
 						<p>Workers</p>
 					</a>
@@ -55,7 +55,7 @@
 				</div>
 			</nav>
 
-			<div id="mess" class="content-user__body content-user__body_chat">
+			<div id="mess" class="content-user__body content-user__body_chat _active">
 				<div class="chat__list chat-list">
 					<div class="chat-list__body">
 						<h1 class="chat-list__title">
@@ -268,7 +268,7 @@
 					@@include('./html/NFTorders.html',{})
 				</div>
 			</div>
-			<div id="workers" class="content-user__body content-user__body_table  _active">
+			<div id="workers" class="content-user__body content-user__body_table">
 				<div class="table-body">
 					@@include('./html/workers.html',{})
 				</div>
